@@ -29,6 +29,7 @@ int main()
 	}
 	else
 	{
+		cout << size << endl;
 		something >> inc;
 		//declare loop control variable
 		int i = 0;
@@ -41,15 +42,18 @@ int main()
 			{
 				something >> array[i];
 			}
+			average = calcAvg(array, i);
 			//if the size is not equal to the counter, first print the total size and then what the array was filled to
 			if(i!=size)
 			{
-				cout << size << " ";
-				otherthing << size << " ";
+				cout << size << " " << i-1 << " " << average;
+				otherthing << size << " " << i-1 << " " << average;
 			}
-			average = calcAvg(array, i);
-			cout << i << " " << average << endl;
-			otherthing << i << " " << average << endl;
+			else
+			{
+				cout << i << " " << average << endl;
+				otherthing << i << " " << average << endl;
+			}
 		}
 	}
 	return 0;
