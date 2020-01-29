@@ -76,7 +76,7 @@ int * allocateArray(int *arr, int *size, double inc)
 	else
 	{
 		int *p = new int[*size];
-		return *p;
+		return p;
 	}
 	//return the pointer for p
 	
