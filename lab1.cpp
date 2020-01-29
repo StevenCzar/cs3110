@@ -46,8 +46,8 @@ int main()
 			//if the size is not equal to the counter, first print the total size and then what the array was filled to
 			if(i!=size)
 			{
-				cout << size << " " << i-1 << " " << average;
-				otherthing << size << " " << i-1 << " " << average;
+				cout << size << " " << i-1 << " " << average << endl;
+				otherthing << size << " " << i-1 << " " << average << endl;
 			}
 			else
 			{
