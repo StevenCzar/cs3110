@@ -23,7 +23,7 @@ int main()
 
 	//validate size
 	//if size is outside the boundaries or not a multiple of 50, output error and don't run rest of program
-	if((size < 100) || (size > 350) || !(size % 50))
+	if((size < 100) || (size > 350) || (size % 50))
 	{
 		cout << "Error\n"; 
 	}
@@ -43,14 +43,14 @@ int main()
 				something >> array[i];
 			}
 			//if the size is not equal to the counter, first print the total size and then what the array was filled to
-			if((i+1)!=size)
+			if(i!=size)
 			{
 				cout << size << " ";
 				otherthing << size << " ";
 			}
-			average = calcAvg(array, i+1);
-			cout << i+1 << " " << average << endl;
-			otherthing << i+1 << " " << average << endl;
+			average = calcAvg(array, i);
+			cout << i << " " << average << endl;
+			otherthing << i << " " << average << endl;
 		}
 	}
 	return 0;
@@ -77,9 +77,7 @@ int * allocateArray(int *arr, int *size, double inc)
 	{
 		int *p = new int[*size];
 		return p;
-	}
-	//return the pointer for p
-	
+	}	
 }
 
 //calculates the average from each index in the array
