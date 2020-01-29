@@ -12,7 +12,7 @@ double calcAvg(int *arr, int size);
 
 int main()
 {
-	int array[];
+	int *array = NULL;
 	int size;
 	double average, inc;
 	fstream something, otherthing;
@@ -29,23 +29,57 @@ int main()
 	else
 	{
 		something >> inc;
+		//declare loop control variable
+		int i = 0;
 		while(something)
 		{
 			cout << size << endl;
-			array = allocateArray(array, size, inc);
-			average = calcAvg(array, size);
-			cout << size << " " << average << endl;
-			otherthing << size << " " << average << endl;
+			array = allocateArray(array, &size, inc);
+			//skip init and use for loop such that the counter persists through size increases
+			//multiple conditions so loop can terminate via reaching end of size or end of read-in
+			for(; ((i < size)&&(something)); i++)
+			{
+				something >> array[i];
+			}
+			//if the size is not equal to the counter, first print the total size and then what the array was filled to
+			if((i+1)!=size)
+			{
+				cout << size << " ";
+				otherthing << size << " ";
+			}
+			average = calcAvg(array, i+1);
+			cout << i+1 << " " << average << endl;
+			otherthing << i+1 << " " << average << endl;
 		}
 	}
+	return 0;
 }
 
+//allocates space for a new array, copies/deletes the old array if there, returns pointer to new array
 int * allocateArray(int *arr, int *size, double inc)
 {
-	size += (size*inc);
-
+	//if array is pointing to something, increase size, allocate new array, copy old array over, then delete old array
+	if(arr != NULL)
+	{
+		size += (size*inc);
+		int *p = new int[size];
+		for(int i = 0; i < size; i++)
+		{
+			p[i] = arr[i];
+		}
+		delete arr;
+		arr = NULL;
+	}
+	//if array is null, allocate new array using initial size
+	else
+	{
+		int *p = new int[size];
+	}
+	//return the pointer for p
+	return p;	
 }
 
+//calculates the average from each index in the array
 double calcAvg(int *arr, int size)
 {
 	double avg = 0;
