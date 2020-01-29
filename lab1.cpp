@@ -70,7 +70,7 @@ int * allocateArray(int *arr, int *size, double inc)
 		}
 		delete arr;
 		arr = NULL;
-		return *p;
+		return p;
 	}
 	//if array is null, allocate new array using initial size
 	else
