@@ -4,6 +4,7 @@
 	Due: 1/30/20
 */
 #include <fstream>
+#include <iostream>
 
 using namespace std;
 
@@ -61,9 +62,9 @@ int * allocateArray(int *arr, int *size, double inc)
 	//if array is pointing to something, increase size, allocate new array, copy old array over, then delete old array
 	if(arr != NULL)
 	{
-		size += (size*inc);
-		int *p = new int[size];
-		for(int i = 0; i < size; i++)
+		&size += ((&size)*inc);
+		int *p = new int[&size];
+		for(int i = 0; i < &size; i++)
 		{
 			p[i] = arr[i];
 		}
@@ -73,10 +74,10 @@ int * allocateArray(int *arr, int *size, double inc)
 	//if array is null, allocate new array using initial size
 	else
 	{
-		int *p = new int[size];
+		int *p = new int[&size];
 	}
 	//return the pointer for p
-	return p;	
+	return *p;	
 }
 
 //calculates the average from each index in the array
