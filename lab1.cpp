@@ -45,7 +45,7 @@ int main()
 			//if the size is not equal to the counter, first print the total size and then what the array was filled to
 			if(i!=size)
 			{
-				average = calcAvg(array, i);
+				average = calcAvg(array, i-1);
 				cout << size << " " << i-1 << " " << average << endl;
 				otherthing << size << " " << i-1 << " " << average << endl;
 			}
