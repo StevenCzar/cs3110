@@ -34,7 +34,6 @@ int main()
 		int i = 0;
 		while(something)
 		{
-			cout << size << endl;
 			array = allocateArray(array, &size, inc);
 			//skip init and use for loop such that the counter persists through size increases
 			//multiple conditions so loop can terminate via reaching end of size or end of read-in
