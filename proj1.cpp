@@ -27,7 +27,7 @@ int main()
 	//if size is outside the boundaries or not a multiple of 50, output error and don't run rest of program
 	if((size < 100) || (size > 350) || (size % 50))
 	{
-		cout << "Error\n"; 
+		cout << "Error\n";
 	}
 	else
 	{
@@ -67,9 +67,11 @@ int main()
 			}
 		}
 	}
-	//close files and exit program
+	//close files, deallocate array, and exit program
 	something.close();
 	otherthing.close();
+	delete [] array;
+	array = NULL;
 	return 0;
 }
 
