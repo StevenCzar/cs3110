@@ -16,8 +16,9 @@ int main()
 	int *array = NULL;
 	int size;
 	double average, inc;
-	//using something for input and otherthing for output
-	fstream something, otherthing;
+	//declare file i/o variables and open
+	ifstream something;
+	ofstream otherthing;
 	something.open("nums.txt");
 	otherthing.open("out.txt");
 	something >> size;
