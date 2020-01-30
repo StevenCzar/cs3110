@@ -16,6 +16,7 @@ int main()
 	int *array = NULL;
 	int size;
 	double average, inc;
+	//using something for input and otherthing for output
 	fstream something, otherthing;
 	something.open("nums.txt");
 	otherthing.open("out.txt");
@@ -29,13 +30,19 @@ int main()
 	}
 	else
 	{
+		//outputs initial size		
 		cout << size << endl;
+		otherthing << size << endl;
 		something >> inc;
 		//declare loop control variable
 		int i = 0;
+		//while reading file...
 		while(something)
 		{
+			//create or increase size of array
 			array = allocateArray(array, &size, inc);
+			//print size of array
+			cout << size << " ";
 			//skip init and use for loop such that the counter persists through size increases
 			//multiple conditions so loop can terminate via reaching end of size or end of read-in
 			for(; ((i < size)&&(something)); i++)
@@ -45,18 +52,22 @@ int main()
 			//if the size is not equal to the counter, first print the total size and then what the array was filled to
 			if(i!=size)
 			{
+				//last run on the for loop causes this value to be larger than expected when reaching EoF
 				average = calcAvg(array, i-1);
-				cout << size << " " << i-1 << " " << average << endl;
-				otherthing << size << " " << i-1 << " " << average << endl;
+				cout <<  i-1 << " " << average << endl;
+				otherthing << i-1 << " " << average << endl;
 			}
 			else
 			{
 				average = calcAvg(array, i);
-				cout << i << " " << average << endl;
-				otherthing << i << " " << average << endl;
+				cout << average << endl;
+				otherthing << average << endl;
 			}
 		}
 	}
+	//close files and exit program
+	something.close();
+	otherthing.close();
 	return 0;
 }
 
@@ -72,7 +83,8 @@ int * allocateArray(int *arr, int *size, double inc)
 		{
 			p[i] = arr[i];
 		}
-		delete arr;
+		//delete pointer and set to null
+		delete [] arr;
 		arr = NULL;
 		return p;
 	}
@@ -85,6 +97,7 @@ int * allocateArray(int *arr, int *size, double inc)
 }
 
 //calculates the average from each index in the array
+//makes a sum and then divides by size of array
 double calcAvg(int *arr, int size)
 {
 	double avg = 0;
