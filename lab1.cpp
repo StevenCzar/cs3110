@@ -43,6 +43,7 @@ int main()
 			array = allocateArray(array, &size, inc);
 			//print size of array
 			cout << size << " ";
+			otherthing << size << " ";
 			//skip init and use for loop such that the counter persists through size increases
 			//multiple conditions so loop can terminate via reaching end of size or end of read-in
 			for(; ((i < size)&&(something)); i++)
