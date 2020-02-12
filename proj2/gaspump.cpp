@@ -27,7 +27,7 @@ void GasPump::dispenseFuel(double *a, double amt)
 		{
 			a[0] = amt;
 			//give them the rest
-			amt = fuel_oh
+			amt = fuel_oh;
 			a[1] = amt;
 			fuel_oh = 0;
 			//update pump stats

@@ -37,7 +37,7 @@ int main()
 			index = 2;
 		}
 		//if the value is in q2
-		else if((capacity > percentage[3])&&(capacity <= (percentage[2]+percentage[3]))
+		else if((capacity > percentage[3])&&(capacity <= (percentage[2]+percentage[3])))
 		{
 			index = 1;
 		}
