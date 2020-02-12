@@ -55,5 +55,9 @@ int main()
 		cout << setprecision(2);
 		cout << i+1 << " " << pump[index]->Fuel_type() << " " << pump[index]->Price() << " " << car[0] << " " << car[1] << " " << car[1]/pump[index]->Price() << " " << pump[index]->Ava_Fuel() << endl;
 	}
+	for(int k = 0; k < 3; k++)
+	{
+		cout << pump[k]->Fuel_type() << " " << pump[k]->Fuel_disp() << " " << pump[k]->Tot_sales() << endl;
+	}
 	return 0;
 }
