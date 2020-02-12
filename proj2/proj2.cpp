@@ -57,7 +57,12 @@ int main()
 	}
 	for(int k = 0; k < 3; k++)
 	{
+		//final output
 		cout << pump[k]->Fuel_type() << " " << pump[k]->Fuel_disp() << " " << pump[k]->Tot_sales() << endl;
+		//set pointer to NULL then delete array after
+		pump[k] = NULL;
 	}
+	delete [] pump;
+
 	return 0;
 }
