@@ -31,7 +31,7 @@ int main()
 	for(int i=0; i<num_cars; i++)
 	{
 		//reusing variables is bad but oh well
-		cost = (((rand()%6)*5)+30);
+		cost = ((((double)rand()%6)*5)+30);
 		capacity = (double)rand()/RAND_MAX;
 		//if the value is in q1
 		cout << cost << endl;
