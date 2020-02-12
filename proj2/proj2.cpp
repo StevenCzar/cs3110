@@ -8,6 +8,7 @@ int main()
 	//create array of pointers for pumps
 	GasPump *pump[3];
 	string s;
+	int seed;
 	double capacity, cost, percentage[3];
 	//read in data
 	ifstream something;
