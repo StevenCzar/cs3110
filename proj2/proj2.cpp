@@ -20,7 +20,6 @@ int main()
 	for(int j=0; j<3; j++)
 	{
 		something >> s >> capacity >> cost >> percentage[j];
-		cout << s << " " << capacity << " " << cost << " " << percentage[j] << endl;
 		pump[j] = new GasPump(s,capacity,cost);
 	}
 	//declare car array for dispenseFuel
