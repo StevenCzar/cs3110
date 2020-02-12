@@ -36,12 +36,12 @@ int main()
 		cost = (((rand()%6)*5)+30);
 		capacity = (double)rand()/RAND_MAX;
 		//if the value is in q1
-		if(capacity <= percentage[3])
+		if(capacity <= percentage[2])
 		{
 			index = 2;
 		}
 		//if the value is in q2
-		else if((capacity > percentage[3])&&(capacity <= (percentage[2]+percentage[3])))
+		else if((capacity > percentage[2])&&(capacity <= (percentage[1]+percentage[2])))
 		{
 			index = 1;
 		}
