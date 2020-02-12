@@ -50,7 +50,8 @@ int main()
 		}
 		//dispense the fuel and print the results
 		pump[index]->dispenseFuel(car,amount);
-		cout << i+1 << " " << pump[index]->Fuel_type() << " " << pump[index]->Price() << " " << car[0] << " " << car[1] << " " << car[1]*pump[index]->Price() << " " << pump[index]->Ava_Fuel() << endl;
+		cout << fixed << showpoint;
+		cout << setprecision(2) << i+1 << " " << pump[index]->Fuel_type() << " " << pump[index]->Price() << " " << car[0] << " " << car[1] << " " << car[1]*pump[index]->Price() << " " << pump[index]->Ava_Fuel() << endl;
 	}
 	return 0;
 }
