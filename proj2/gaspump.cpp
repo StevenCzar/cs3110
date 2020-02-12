@@ -27,6 +27,8 @@ void GasPump::dispenseFuel(double *a, double amt)
 	//if the pump is not replenishing...
 	if(turn_away)
 	{
+		a[0] = amt*ppg;
+		a[1] = 0;
 		replenish();
 		turn_away = false;
 		return;
