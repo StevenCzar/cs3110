@@ -60,9 +60,8 @@ int main()
 		//final output
 		cout << pump[k]->Fuel_type() << " " << pump[k]->Fuel_disp() << " " << pump[k]->Tot_sales() << endl;
 		//set pointer to NULL then delete array after
-		pump[k] = NULL;
 	}
 	delete [] pump;
-
+	pump = NULL;
 	return 0;
 }
