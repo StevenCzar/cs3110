@@ -58,7 +58,6 @@ void GasPump::dispenseFuel(double *a, double amt)
 		//check to see if it needs to be replenished
 		if(fuel_oh < (fuel_cap*.10))
 		{
-			replenish();
 			turn_away = true;
 		}
 	}
