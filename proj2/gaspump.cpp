@@ -19,6 +19,9 @@ void GasPump::dispenseFuel(double *a, double amt)
 {
 	//convert to amount of gallons
 	amt = amt/ppg;
+	std::cout << ppg << endl;
+	std::cout << amt << endl;
+	std::cout << turn_away << endl;
 	//if the pump is not replenishing...
 	if(!turn_away)
 	{
