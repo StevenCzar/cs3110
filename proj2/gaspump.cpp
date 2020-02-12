@@ -1,4 +1,5 @@
 #include "gaspump.h"
+#include <iostream>
 //constructor to set gaspump init values
 GasPump::GasPump(std::string s, double cap, double price)
 {
