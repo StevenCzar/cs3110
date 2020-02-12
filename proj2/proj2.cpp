@@ -15,9 +15,11 @@ int main()
 	ifstream something;
 	something.open("gas.txt");
 	cin >> seed >> num_cars;
+	cout << seed << endl << num_cars << endl;
 	for(int j=0; j<3; j++)
 	{
 		cin >> s >> capacity >> cost >> percentage[j];
+		cout << s << " " << capacity << " " << cost << " " << percentage[j] << endl;
 		pump[0] = new GasPump(s,capacity,cost);
 	}
 	//declare car array for dispenseFuel
