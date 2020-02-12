@@ -15,12 +15,12 @@ int main()
 	ifstream something;
 	cout << "what";
 	something.open("gas.txt");
-	cout << " about here?"
-	cin >> seed >> num_cars;
+	cout << " about here?";
+	something >> seed >> num_cars;
 	cout << seed << endl << num_cars << endl;
 	for(int j=0; j<3; j++)
 	{
-		cin >> s >> capacity >> cost >> percentage[j];
+		something >> s >> capacity >> cost >> percentage[j];
 		cout << s << " " << capacity << " " << cost << " " << percentage[j] << endl;
 		pump[0] = new GasPump(s,capacity,cost);
 	}
