@@ -31,17 +31,17 @@ int main()
 	for(int i=0; i<num_cars; i++)
 	{
 		//reusing variables is bad but oh well
-		capacity = (double)rand()/RAND_MAX;
-		cost = (((rand()%6)*5)+30);
+		double choice = (double)rand()/RAND_MAX;
+		double amount = (((rand()%6)*5)+30);
 		//if the value is in q1
-		cout << cost << endl;
-		cout << capacity << endl;
-		if(capacity <= percentage[0])
+		cout << amount << endl;
+		cout << choice << endl;
+		if(choice <= percentage[0])
 		{
 			index = 2;
 		}
 		//if the value is in q2
-		else if((capacity > percentage[0])&&(capacity <= (percentage[1]+percentage[0])))
+		else if((choice > percentage[0])&&(choice <= (percentage[1]+percentage[0])))
 		{
 			index = 1;
 		}
@@ -51,7 +51,7 @@ int main()
 			index = 0;
 		}
 		//dispense the fuel and print the results
-		pump[index]->dispenseFuel(car,cost);
+		pump[index]->dispenseFuel(car,amount);
 		cout << i+1 << " " << pump[index]->Fuel_type() << " " << pump[index]->Price() << " " << car[0] << " " << car[1] << " " << car[1]*pump[index]->Price() << " " << pump[index]->Ava_Fuel() << endl;
 	}
 	return 0;
