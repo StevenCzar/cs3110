@@ -7,6 +7,7 @@ GasPump::GasPump(std::string s, double cap, double price)
 	fuel_cap = cap;
 	ppg = price;
 	turn_away = false;
+	fuel_oh = fuel_cap;
 }
 
 //puts fuel onhand back to the cap
