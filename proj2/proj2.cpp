@@ -16,7 +16,6 @@ int main()
 	ifstream something;
 	something.open("gas.txt");
 	something >> seed >> num_cars;
-	cout << seed << endl << num_cars << endl;
 	for(int j=0; j<3; j++)
 	{
 		something >> s >> capacity >> cost >> percentage[j];
