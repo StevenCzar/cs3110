@@ -16,6 +16,7 @@ GasPump::GasPump(std::string s, double cap, double price)
 void GasPump::replenish()
 {
 	fuel_oh = fuel_cap;
+	return;
 }
 
 //Dispenses fuel and determines if it needs to refuel
@@ -28,6 +29,7 @@ void GasPump::dispenseFuel(double *a, double amt)
 	{
 		replenish();
 		turn_away = false;
+		return;
 	}	
 	//if the pump is replenishing, allow next customer to go
 	else
@@ -61,4 +63,5 @@ void GasPump::dispenseFuel(double *a, double amt)
 			turn_away = true;
 		}
 	}
+	return;
 }
