@@ -13,7 +13,9 @@ int main()
 	double capacity, cost, percentage[3];
 	//read in data
 	ifstream something;
+	cout << "what";
 	something.open("gas.txt");
+	cout << " about here?"
 	cin >> seed >> num_cars;
 	cout << seed << endl << num_cars << endl;
 	for(int j=0; j<3; j++)
