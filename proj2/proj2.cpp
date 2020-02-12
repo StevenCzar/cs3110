@@ -26,7 +26,7 @@ int main()
 	//set random seed
 	srand(seed);
 	//lets try this
-	for(int i:num_cars)
+	for(int i=0; i<num_cars; i++)
 	{
 		//reusing variables is bad but oh well
 		cost = (((rand()%6)*5)+30);

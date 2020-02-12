@@ -10,7 +10,7 @@ class GasPump {
 		bool turn_away;
 		void replenish();
 	public:
-		GasPump(string, double, double);
+		GasPump(std::string, double, double);
 		std::string Fuel_type() {return gas_type;}
 		double Price() {return ppg;}
 		double Ava_Fuel() {return fuel_oh;}

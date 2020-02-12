@@ -5,7 +5,7 @@ GasPump::GasPump(string s, double cap, double price)
 	gas_type = s;
 	fuel_cap = cap;
 	ppg = price;
-	turn_away = False;
+	turn_away = false;
 }
 
 //puts fuel onhand back to the cap
@@ -51,13 +51,13 @@ void GasPump::dispenseFuel(double *a, double amt)
 			a[0] = amt;
 			a[1] = 0;
 			replenish();
-			turn_away = True;
+			turn_away = true;
 		}
 	}
 	//if the pump is replenishing, allow next customer to go
 	else
 	{
 		replenish();
-		turn_away = False;
+		turn_away = false;
 	}
 }
