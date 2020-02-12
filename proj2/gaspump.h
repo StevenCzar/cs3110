@@ -1,12 +1,14 @@
 #ifndef GASPUMP_H
 #define GASPUMP_H
 
+#include <string>
+
 class GasPump {
 	private:
 		string gas_type;
 		double fuel_oh, fuel_cap, ppg, tot_amt_fuel, tot_amt_sales;
 		bool turn_away;
-		void replenish(GasPump);
+		void replenish();
 	public:
 		GasPump(string, double, double);
 		string Fuel_type() {return gas_type;}

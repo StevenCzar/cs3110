@@ -7,8 +7,7 @@ int main()
 {
 	//create array of pointers for pumps
 	GasPump *pump[3];
-	string s
-
+	string s;
 	double capacity, cost, percentage[3];
 	//read in data
 	ifstream something;
@@ -47,7 +46,7 @@ int main()
 		}
 		//dispense the fuel and print the results
 		pump[index]->dispenseFuel(car,cost);
-		cout << i+1 << " " << pump[index]->Fuel_type() << " " << pump[index]->Price() << " " << car[0] << " " << car[1] << " " << car[1]*pump[index]->Price() << " " << pump[index]->Ava_fuel() << endl;
+		cout << i+1 << " " << pump[index]->Fuel_type() << " " << pump[index]->Price() << " " << car[0] << " " << car[1] << " " << car[1]*pump[index]->Price() << " " << pump[index]->Ava_Fuel() << endl;
 	}
 	return 0;
 }
