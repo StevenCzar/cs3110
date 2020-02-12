@@ -34,6 +34,9 @@ int main()
 		cost = (((rand()%6)*5)+30);
 		capacity = (double)rand()/RAND_MAX;
 		//if the value is in q1
+		cout << percentage[2] << endl;
+		cout << percentage[1] << endl;
+		cout << percentage[0] << endl;
 		if(capacity <= percentage[2])
 		{
 			index = 2;
