@@ -21,10 +21,6 @@ void GasPump::dispenseFuel(double *a, double amt)
 {
 	//convert to amount of gallons
 	amt = amt/ppg;
-	std::cout << ppg << std::endl;
-	std::cout << amt << std::endl;
-	std::cout << turn_away << std::endl;
-	std::cout << fuel_oh << std::endl;
 	//if the pump is not replenishing...
 	if(turn_away)
 	{
@@ -37,10 +33,10 @@ void GasPump::dispenseFuel(double *a, double amt)
 		//if the amount is greater than onhands...
 		if(amt > fuel_oh)
 		{
-			a[0] = amt;
+			a[0] = amt*ppg;
 			//give them the rest
 			amt = fuel_oh;
-			a[1] = amt;
+			a[1] = amt*ppg;
 			fuel_oh = 0;
 			//update pump stats
 			tot_amt_fuel += amt;
@@ -49,10 +45,8 @@ void GasPump::dispenseFuel(double *a, double amt)
 		//if the amount is within onhands
 		else
 		{
-			a[0] = amt;
-			std::cout << " - amt req\n";
-			a[1] = amt;
-			std::cout << " - amt given\n";
+			a[0] = amt*ppg;
+			a[1] = amt*ppg;
 			//give them the amount they want
 			fuel_oh -= amt;
 			//update pump stats
@@ -62,7 +56,7 @@ void GasPump::dispenseFuel(double *a, double amt)
 		//check to see if it needs to be replenished
 		if(fuel_oh < (fuel_cap*.10))
 		{
-			a[0] = amt;
+			a[0] = amt*ppg;
 			a[1] = 0;
 			replenish();
 			turn_away = true;
