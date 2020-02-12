@@ -24,7 +24,13 @@ void GasPump::dispenseFuel(double *a, double amt)
 	std::cout << amt << std::endl;
 	std::cout << turn_away << std::endl;
 	//if the pump is not replenishing...
-	if(!turn_away)
+	if(turn_away)
+	{
+		replenish();
+		turn_away = false;
+	}	
+	//if the pump is replenishing, allow next customer to go
+	else
 	{
 		//if the amount is greater than onhands...
 		if(amt > fuel_oh)
@@ -57,11 +63,5 @@ void GasPump::dispenseFuel(double *a, double amt)
 			replenish();
 			turn_away = true;
 		}
-	}
-	//if the pump is replenishing, allow next customer to go
-	else
-	{
-		replenish();
-		turn_away = false;
 	}
 }
