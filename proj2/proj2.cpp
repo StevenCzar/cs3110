@@ -1,5 +1,6 @@
 #include "gaspump.h"
 #include <iostream>
+#include <fstream>
 
 using namespace std;
 
@@ -8,7 +9,7 @@ int main()
 	//create array of pointers for pumps
 	GasPump *pump[3];
 	string s;
-	int seed;
+	int seed, num_cars;
 	double capacity, cost, percentage[3];
 	//read in data
 	ifstream something;

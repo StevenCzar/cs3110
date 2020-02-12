@@ -9,13 +9,13 @@ GasPump::GasPump(string s, double cap, double price)
 }
 
 //puts fuel onhand back to the cap
-GasPump::replenish()
+void GasPump::replenish()
 {
 	fuel_oh = fuel_cap;
 }
 
 //Dispenses fuel and determines if it needs to refuel
-GasPump::dispenseFuel(double *a, double amt)
+void GasPump::dispenseFuel(double *a, double amt)
 {
 	//convert to amount of gallons
 	amt = amt/ppg;
