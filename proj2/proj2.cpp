@@ -34,8 +34,6 @@ int main()
 		double choice = (double)rand()/RAND_MAX;
 		double amount = (((rand()%6)*5)+30);
 		//if the value is in q1
-		cout << amount << endl;
-		cout << choice << endl;
 		if(choice <= percentage[0])
 		{
 			index = 2;
