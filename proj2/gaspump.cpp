@@ -23,6 +23,7 @@ void GasPump::dispenseFuel(double *a, double amt)
 	std::cout << ppg << std::endl;
 	std::cout << amt << std::endl;
 	std::cout << turn_away << std::endl;
+	std::cout << fuel_oh << std::endl;
 	//if the pump is not replenishing...
 	if(turn_away)
 	{
@@ -48,7 +49,9 @@ void GasPump::dispenseFuel(double *a, double amt)
 		else
 		{
 			a[0] = amt;
+			std::cout << " - amt req\n";
 			a[1] = amt;
+			std::cout << " - amt given\n";
 			//give them the amount they want
 			fuel_oh -= amt;
 			//update pump stats
