@@ -1,3 +1,8 @@
+/* 	Steven Czarnecki
+	CSCI 3110 - 001
+	Project #2
+	Due: 2/11/20
+*/
 #include "gaspump.h"
 #include <iostream>
 //constructor to set gaspump init values
@@ -24,7 +29,7 @@ void GasPump::dispenseFuel(double *a, double amt)
 {
 	//convert to amount of gallons
 	amt = amt/ppg;
-	//if the pump is not replenishing...
+	//if the pump is replenishing, allow next customer to go
 	if(turn_away)
 	{
 		a[0] = amt*ppg;
@@ -33,7 +38,7 @@ void GasPump::dispenseFuel(double *a, double amt)
 		turn_away = false;
 		return;
 	}	
-	//if the pump is replenishing, allow next customer to go
+	//if the pump is ready for use...
 	else
 	{
 		//if the amount is greater than onhands...

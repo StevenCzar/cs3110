@@ -1,3 +1,8 @@
+/* 	Steven Czarnecki
+	CSCI 3110 - 001
+	Project #2
+	Due: 2/11/20
+*/
 #include "gaspump.h"
 #include <iostream>
 #include <fstream>
