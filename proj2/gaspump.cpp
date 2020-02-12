@@ -21,6 +21,7 @@ void GasPump::replenish()
 //Dispenses fuel and determines if it needs to refuel
 void GasPump::dispenseFuel(double *a, double amt)
 {
+	std::cout << tot_amt_sales << endl;
 	//convert to amount of gallons
 	amt = amt/ppg;
 	//if the pump is not replenishing...
