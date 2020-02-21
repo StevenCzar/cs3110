@@ -30,7 +30,7 @@ Card::Card(int face, suit st)
 	}
 }
 
-friend std::ostream& operator << (std::ostream& os, const Card& cd)
+std::ostream& operator << (std::ostream& os, const Card& cd)
 {
 	os << cd.pointValue;
 	if(cd.cardSuit == diamonds)
