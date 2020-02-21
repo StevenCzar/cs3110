@@ -12,12 +12,7 @@ Deck::Deck()
 	int j = 0;
 	for(int i=0; i<13; i++)
 	{
-		theDeck[j] = Card(i, diamonds);
-		j++;
-	}
-	for(int i=0; i<13; i++)
-	{
-		theDeck[j] = Card(i, spades);
+		theDeck[j] = Card(i, clubs);
 		j++;
 	}
 	for(int i=0; i<13; i++)
@@ -27,7 +22,12 @@ Deck::Deck()
 	}
 	for(int i=0; i<13; i++)
 	{
-		theDeck[j] = Card(i, clubs);
+		theDeck[j] = Card(i, spades);
+		j++;
+	}
+	for(int i=0; i<13; i++)
+	{
+		theDeck[j] = Card(i, diamonds);
 		j++;
 	}
 	//set top card to be the first in array
@@ -46,14 +46,14 @@ Card Deck::dealCard()
 void Deck::Shuffle()
 {
 	//use random_shuffle
-	std::random_shuffle(std::begin(theDeck),std::end(theDeck));
+	std::random_shuffle(std::begin(theDeck[0]),std::end(theDeck[51]));
 	return;
 }
 
 bool Deck::isEmpty()
 {
 	//if the top card is now past the size...
-	if(topCard==52)
+	if(topCard==numCards)
 	{
 		return true;
 	}

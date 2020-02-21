@@ -20,7 +20,7 @@ Player::Player(string pname="unknown")
 Card Player::playCard()
 {
 	//compare cards 1-2, 2-3, and 1-3, play highest value
-
+	
 	//remove played card by...
 	//setting hasPlayed to true
 	hasPlayed[i] = true;
