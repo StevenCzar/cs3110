@@ -63,7 +63,7 @@ bool Deck::isEmpty()
 	return false;
 }
 
-friend std::ostream& operator << (std::ostream& os, const Deck& dk)
+std::ostream& operator << (std::ostream& os, const Deck& dk)
 {
 	for(int j = 0; j < 4; j++)
 	{
