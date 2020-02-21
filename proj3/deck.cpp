@@ -49,7 +49,7 @@ Card Deck::dealCard()
 void Deck::Shuffle()
 {
 	//use random_shuffle
-	std::random_shuffle(std::begin(theDeck[0]),std::end(theDeck[51]));
+	std::random_shuffle(std::begin(theDeck),std::end(theDeck));
 	return;
 }
 
