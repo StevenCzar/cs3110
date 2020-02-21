@@ -33,15 +33,15 @@ Card::Card(int face, suit st)
 friend std::ostream& operator << (std::ostream& os, const Card& cd)
 {
 	os << cd.pointValue;
-	if(cd.cardSuit == "diamonds")
+	if(cd.cardSuit == diamonds)
 	{
 		os << "D";
 	}
-	else if(cd.cardSuit == "spades")
+	else if(cd.cardSuit == spades)
 	{
 		os << "S";
 	}
-	cd.cardSuit == "hearts"
+	else if(cd.cardSuit == hearts)
 	{
 		os << "H";
 	}
