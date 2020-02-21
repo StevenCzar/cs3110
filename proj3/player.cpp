@@ -25,7 +25,7 @@ Card Player::playCard()
 		hasPlayed[0] = true;
 		return hand[0];
 	}
-	else if((hand[1] >> hand[2])&&(hand[1]>hand[0]))
+	else if((hand[1] > hand[2])&&(hand[1]>hand[0]))
 	{
 		hasPlayed[1] = true;
 		return hand[1];
@@ -35,7 +35,7 @@ Card Player::playCard()
 		hasPlayed[2] = true;
 		return hand[2];
 	}
-
+	return hand[0];
 }
 
 //draw card from deck array
@@ -48,12 +48,13 @@ void Player::drawCard(Deck& dk)
 		if((hasPlayed[i] == true)&&(!(dk.isEmpty())))
 		{
 			//deal card and set hasPlayed to false
-			hand[i] = dk->dealCard();
+			hand[i] = dk.dealCard();
 			hasPlayed[i] = false;
 			//exit here so it will alternate on init
 			return;
 		}
 	}
+	return;
 }
 
 void Player::addScore(Card acard)
@@ -62,17 +63,17 @@ void Player::addScore(Card acard)
 	return;
 }
 
-int Player::getScore()
+int Player::getScore() const
 {
 	return score;
 }
 
-string Player::getName()
+string Player::getName() const
 {
 	return name;
 }
 
-bool Player::emptyHand()
+bool Player::emptyHand() const
 {
 	for(int i = 0; i < Max_Cards; i++)
 	{

@@ -7,6 +7,8 @@
 #include "card.h"
 #include <iostream>
 
+using std::ostream;
+
 Card::Card(int face, suit st)
 {
 	cardFace = face;
@@ -79,17 +81,17 @@ bool operator== (const Card& cd) const
 	return false;
 }
 
-int Card::getPointValue()
+int Card::getPointValue() const
 {
 	return pointValue;
 }
 
-int Card::getFaceValue()
+int Card::getFaceValue() const
 {
 	return cardFace;
 }
 
-suit Card::getSuit()
+suit Card::getSuit() const
 {
 	return cardSuit;
 }
