@@ -6,7 +6,7 @@
 
 #include "player.h"
 
-Player::Player(string pname="unknown")
+Player::Player(string pname)
 {
 	name = pname;
 	score = 0;
@@ -75,14 +75,16 @@ string Player::getName() const
 
 bool Player::emptyHand() const
 {
+	bool something = true;
 	for(int i = 0; i < Max_Cards; i++)
 	{
 		//check if player has unplayed cards
 		if(hasPlayed[i] == false)
 		{
+			//if they have any unplayed cards, set false
 			something = false;
 		}
 	}
-	//otherwise hand is empty
-	return true;
+	//return if they have cards or not
+	return something;
 }

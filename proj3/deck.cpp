@@ -7,6 +7,7 @@
 #include "card.h"
 #include "deck.h"
 #include <iostream>
+#include <algorithm>
 
 Deck::Deck()
 {
@@ -41,7 +42,7 @@ Card Deck::dealCard()
 	//move top card to next
 	topCard++;
 	//returns the 'card on top of the new top card'
-	return Card[topCard-1];
+	return theDeck[topCard-1];
 
 }
 
