@@ -9,6 +9,8 @@
 #include <iostream>
 #include <algorithm>
 
+using std::ostream;
+
 Deck::Deck()
 {
 	//fill theDeck with cards
@@ -69,7 +71,7 @@ std::ostream& operator << (std::ostream& os, const Deck& dk)
 	{
 		for(int i = 0; i < 13; i++)
 		{
-			std::cout << dk.theDeck[i].operator<<;
+			std::cout << dk.theDeck[i+(j*13)].operator<<;
 		}
 		std::cout << std::endl;
 	}
