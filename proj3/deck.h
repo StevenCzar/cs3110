@@ -1,3 +1,9 @@
+/*  Steven Czarnecki
+    CSCI 3110 - 001
+    Project #3
+    Due: 2/23/20
+*/
+
 #ifndef DECK_H
 #define DECK_H
 

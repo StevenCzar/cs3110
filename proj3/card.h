@@ -1,3 +1,9 @@
+/* 	Steven Czarnecki
+	CSCI 3110 - 001
+	Project #3
+	Due: 2/23/20
+*/
+
 #ifndef CARD_H
 #define CARD_H
 
