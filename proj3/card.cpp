@@ -56,7 +56,7 @@ std::ostream& Card::operator << (std::ostream& os, const Card& cd)
 
 bool Card::operator < (const Card& cd) const
 {
-	if(*this.pointValue < cd.getPointValue())
+	if(*this->pointValue < cd.getPointValue())
 	{
 		return true;
 	}
@@ -65,7 +65,7 @@ bool Card::operator < (const Card& cd) const
 
 bool Card::operator > (const Card& cd) const
 {
-	if(*this.pointValue > cd.getPointValue())
+	if(*this->pointValue > cd.getPointValue())
 	{
 		return true;
 	}
@@ -74,7 +74,7 @@ bool Card::operator > (const Card& cd) const
 
 bool Card::operator== (const Card& cd) const
 {
-	if(*this.pointValue == cd.getPointValue())
+	if(*this->pointValue == cd.getPointValue())
 	{
 		return true;
 	}
