@@ -4,7 +4,9 @@
 	Due: 2/23/20
 */
 
+#include "card.h"
 #include "deck.h"
+#include <iostream>
 
 Deck::Deck()
 {
@@ -58,4 +60,17 @@ bool Deck::isEmpty()
 		return true;
 	}
 	return false;
+}
+
+friend std::ostream& operator << (std::ostream&, const Deck&)
+{
+	for(int j = 0; j < 4; j++)
+	{
+		for(int i = 0; i < 13; i++)
+		{
+			os << theDeck[i].operator<<;
+		}
+		os << endl;
+	}
+	return os;
 }

@@ -20,10 +20,22 @@ Player::Player(string pname="unknown")
 Card Player::playCard()
 {
 	//compare cards 1-2, 2-3, and 1-3, play highest value
-	
-	//remove played card by...
-	//setting hasPlayed to true
-	hasPlayed[i] = true;
+	if((hand[0] > hand[1])&&(hand[0]>hand[2]))
+	{
+		hasPlayed[0] = true;
+		return hand[0];
+	}
+	else if((hand[1] >> hand[2])&&(hand[1]>hand[0]))
+	{
+		hasPlayed[1] = true;
+		return hand[1];
+	}
+	else if((hand[2] > hand[1])&&(hand[2] > hand[0]))
+	{
+		hasPlayed[2] = true;
+		return hand[2];
+	}
+
 }
 
 //draw card from deck array
@@ -33,7 +45,7 @@ void Player::drawCard(Deck& dk)
 	{
 		//check to see which card was just played
 		//also make sure deck isn't empty
-		if((hasPlayed[i] == true)&&(!(dk->isEmpty())))
+		if((hasPlayed[i] == true)&&(!(dk.isEmpty())))
 		{
 			//deal card and set hasPlayed to false
 			hand[i] = dk->dealCard();
