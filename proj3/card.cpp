@@ -30,7 +30,7 @@ Card::Card(int face, suit st)
 	}
 }
 
-std::ostream& operator << (std::ostream& os, const Card& cd)
+std::ostream& Card::operator << (std::ostream& os, const Card& cd)
 {
 	os << cd.pointValue;
 	if(cd.cardSuit == diamonds)
@@ -54,27 +54,27 @@ std::ostream& operator << (std::ostream& os, const Card& cd)
 	return os;
 }
 
-bool operator < (const Card& cd) const
+bool Card::operator < (const Card& cd) const
 {
-	if(pointValue < cd.getPointValue())
+	if(*this.pointValue < cd.getPointValue())
 	{
 		return true;
 	}
 	return false;
 }
 
-bool operator > (const Card& cd) const
+bool Card::operator > (const Card& cd) const
 {
-	if(pointValue > cd.getPointValue())
+	if(*this.pointValue > cd.getPointValue())
 	{
 		return true;
 	}
 	return false;
 }
 
-bool operator== (const Card& cd) const
+bool Card::operator== (const Card& cd) const
 {
-	if(pointValue == cd.getPointValue())
+	if(*this.pointValue == cd.getPointValue())
 	{
 		return true;
 	}
