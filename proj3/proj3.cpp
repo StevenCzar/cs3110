@@ -138,7 +138,7 @@ int main()
 		std::cout << "(" << p1.getScore() << ") - ";
 		std::cout << p2.getName() << "  ";
 		std::cout << p2;
-		std::cout << "(" << p2.getScore() << ")\n";
+		std::cout << "(" << p2.getScore() << ")\n\n";
 		//draw back to 3
 		p1.drawCard(deck);
 		p2.drawCard(deck);
