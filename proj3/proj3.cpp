@@ -24,7 +24,7 @@ int main()
 	string name = "wads";
 	string what;
 	int seed;
-	ifstream something;
+	std::fstream something;
 	//for file output stuff
 	//std::ostream os;
 	something >> what;
