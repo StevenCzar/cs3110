@@ -21,14 +21,14 @@ int main()
 	int p1Suit, p2Suit;
 
 	//read in names and instantiate players
-	std::string name = " ";
+	string name = "wads";
+	string what;
 	int seed;
 	std::ifstream something;
 	//for file output stuff
 	//std::ostream os;
-	something >> name;
+	something >> what;
 	Player p1(name);
-	name = "";
 	something >> name;
 	Player p2(name);
 
