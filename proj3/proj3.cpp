@@ -25,7 +25,7 @@ int main()
 	int seed;
 	std::ifstream something;
 	//for file output stuff
-	std::ostream os;
+	//std::ostream os;
 	something >> name;
 	Player p1(name);
 	name = "";
@@ -40,11 +40,11 @@ int main()
 	Deck deck;
 
 	//print deck
-	os << deck;
+	std::cout << deck;
 
 	//now shuffle then print again
 	deck.Shuffle();
-	os << deck;
+	std::cout << deck;
 
 	//draw 3 cards for each player
 	for(int i = 0; i < 3; i++)
@@ -60,10 +60,10 @@ int main()
 		//print turn#, player name, cards, and score
 		std::cout << turn << ")  ";
 		std::cout << p1.getName() << "  ";
-		os << p1;
+		std::cout << p1;
 		std::cout << "(" << p1.getScore() << ") - ";
 		std::cout << p2.getName() << "  ";
-		os << p2;
+		std::cout << p2;
 		std::cout << "(" << p2.getScore() << ")\n";
 
 		//now play
@@ -134,10 +134,10 @@ int main()
 		//post-turn print
 		std::cout << turn << ")  ";
 		std::cout << p1.getName() << "  ";
-		os << p1;
+		std::cout << p1;
 		std::cout << "(" << p1.getScore() << ") - ";
 		std::cout << p2.getName() << "  ";
-		os << p2;
+		std::cout << p2;
 		std::cout << "(" << p2.getScore() << ")\n";
 		//draw back to 3
 		p1.drawCard(deck);
