@@ -142,6 +142,8 @@ int main()
 		//draw back to 3
 		p1.drawCard(deck);
 		p2.drawCard(deck);
+		//next turn
+		turn++;
 	}
 	//end of game printing now 
 	if(p1.getScore() > p2.getScore())
