@@ -89,7 +89,7 @@ bool Player::emptyHand() const
 	return something;
 }
 
-ostream& operator << (ostream& os, const Player& p);
+ostream& operator << (ostream& os, const Player& p)
 {
 	for(int i = 0; i < 3; i++)
 	{
