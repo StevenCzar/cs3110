@@ -76,8 +76,12 @@ std::ostream& operator << (std::ostream& os, const Card& cd)
 
 bool Card::operator < (const Card& cd) const
 {
-	if(((cardFace < cd.getFaceValue())&&(cardFace!=0)))
+	if(cardFace < cd.getFaceValue())
 	{
+		if(cardFace==0)
+		{
+			return false;
+		}
 		return true;
 	}
 	return false;
@@ -85,9 +89,15 @@ bool Card::operator < (const Card& cd) const
 
 bool Card::operator > (const Card& cd) const
 {
-	if((cardFace > cd.getFaceValue())&&(cd.getFaceValue()!=0))
+	//check this first
+	if(cardFace > cd.getFaceValue())
 	{
-		return true;
+		//check ace
+		if(cd.getFaceValue()==0)
+		{
+			return false;
+		}
+		return true
 	}
 	return false;
 }
