@@ -49,7 +49,7 @@ std::ostream& operator << (std::ostream& os, const Card& cd)
 	{
 		os << "C";
 	}
-	os << "[" << cd.getPointValue() << "]\t";
+	os << "[" << cd.getPointValue() << "]  ";
 
 	return os;
 }

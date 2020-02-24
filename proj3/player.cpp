@@ -88,3 +88,18 @@ bool Player::emptyHand() const
 	//return if they have cards or not
 	return something;
 }
+
+ostream& operator << (ostream& os, const Player& p);
+{
+	for(int i = 0; i < 3; i++)
+	{
+		if(hasPlayed[i] == false)
+		{
+			os << hand[i] << "  ";
+		}
+		else
+		{
+			os << "_____  ";
+		}
+	}
+}
