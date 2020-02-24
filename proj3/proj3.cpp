@@ -8,6 +8,7 @@
 #include "card.h"
 #include "deck.h"
 #include <iostream>
+#include <fstream>
 #include <string>
 #include <iomanip>
 
@@ -24,7 +25,7 @@ int main()
 	int seed;
 	ifstream something;
 	//for file output stuff
-	ostream okay;
+	ostream os;
 	something >> name;
 	Player p1(name);
 	name = "";
@@ -48,8 +49,8 @@ int main()
 	//draw 3 cards for each player
 	for(int i = 0; i < 3; i++)
 	{
-		p1.drawCard();
-		p2.drawCard();
+		p1.drawCard(deck);
+		p2.drawCard(deck);
 	}
 
 	//now play
@@ -139,8 +140,8 @@ int main()
 		os << p2;
 		std:cout << "(" << p2.getScore() << ")\n";
 		//draw back to 3
-		p1.drawCard();
-		p2.drawCard();
+		p1.drawCard(deck);
+		p2.drawCard(deck);
 	}
 	//end of game printing now 
 	if(p1.getScore() > p2.getScore())
