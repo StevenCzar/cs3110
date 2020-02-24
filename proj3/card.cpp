@@ -32,7 +32,27 @@ Card::Card(int face, suit st)
 
 std::ostream& operator << (std::ostream& os, const Card& cd)
 {
-	os << cd.pointValue;
+	if(cd.pointValue == 15)
+	{
+		os << "A";
+	}
+	else if(cd.cardFace == 10)
+	{
+		os << "J";
+	}
+	else if(cd.cardFace == 11)
+	{
+		os << "Q";
+	}
+	else if(cd.cardFace == 12)
+	{
+		os << "K";
+	}
+	else
+	{
+		os << cd.pointValue;
+	}
+	
 	if(cd.cardSuit == diamonds)
 	{
 		os << "D";
