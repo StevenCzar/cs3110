@@ -26,14 +26,14 @@ int main()
 	std::ifstream something;
 	//for file output stuff
 	//std::ostream os;
-	something >> name;
+	std::something >> name;
 	Player p1(name);
 	name = "";
-	something >> name;
+	std::something >> name;
 	Player p2(name);
 
 	//get and set random seed
-	something >> seed;
+	std::something >> seed;
 	srand(seed);
 
 	//init deck

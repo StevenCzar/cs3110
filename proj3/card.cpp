@@ -52,7 +52,7 @@ std::ostream& operator << (std::ostream& os, const Card& cd)
 	{
 		os << cd.pointValue;
 	}
-	
+
 	if(cd.cardSuit == diamonds)
 	{
 		os << "D";
@@ -76,7 +76,7 @@ std::ostream& operator << (std::ostream& os, const Card& cd)
 
 bool Card::operator < (const Card& cd) const
 {
-	if(pointValue < cd.getPointValue())
+	if((cardFace < cd.getFaceValue())&&(cardFace!=0))
 	{
 		return true;
 	}
@@ -85,7 +85,7 @@ bool Card::operator < (const Card& cd) const
 
 bool Card::operator > (const Card& cd) const
 {
-	if(pointValue > cd.getPointValue())
+	if((cardFace > cd.getFaceValue())&&(cd.getFaceValue()!=0))
 	{
 		return true;
 	}
