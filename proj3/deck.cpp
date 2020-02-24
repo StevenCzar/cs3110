@@ -67,9 +67,9 @@ bool Deck::isEmpty()
 
 ostream& operator << (ostream& os, const Deck& dk)
 {
-	for(int j = 0; j < 4; j++)
+	for(int j = 3; j >= 0; j++)
 	{
-		for(int i = 0; i < 13; i++)
+		for(int i = 12; i >= 0; i++)
 		{
 			os << dk.theDeck[i+(j*13)];
 		}
