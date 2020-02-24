@@ -103,4 +103,5 @@ ostream& operator << (ostream& os, const Player& p)
 			os << "_____  ";
 		}
 	}
+	return os;
 }
