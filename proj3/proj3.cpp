@@ -21,7 +21,7 @@ int main()
 	int p1Suit, p2Suit;
 
 	//read in names and instantiate players
-	string name;
+	std::string name;
 	int seed;
 	std::ifstream something;
 	//for file output stuff

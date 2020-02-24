@@ -6,7 +6,7 @@
 
 #include "player.h"
 
-Player::Player(string pname)
+Player::Player(std::string pname)
 {
 	name = pname;
 	score = 0;
