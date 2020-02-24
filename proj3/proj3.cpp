@@ -24,12 +24,12 @@ int main()
 	string name;
 	int seed;
 	std::fstream something;
-	fstream.open("cardgame.txt");
+	something.open("cardgame.txt");
 	//for file output stuff
 	//std::ostream os;
 	something >> name;
 	Player p1(name);
-	something = "";
+	name = "";
 	something >> name;
 	Player p2(name);
 
