@@ -13,7 +13,6 @@
 #include "card.h"
 
 using std::ostream;
-using std::string;
 
 class Player
 {
@@ -21,7 +20,7 @@ public:
     static const int Max_Cards = 3; // # of cards a player can have in a hand
 
     // constructor - player's name defaults to "unknown" if not supplied
-	Player(string pname="unknown");
+	Player(std::string pname="unknown");
 
     // Simulates player removing one card from hand and playing it - returns the card
 	// Play the card with the highest value, per the rules in the specification 
@@ -43,7 +42,7 @@ public:
 	bool emptyHand() const;
 
     // overload the << operator to display cards in player's hand (or _____ if no card)
-    friend std::ostream& operator << (std::ostream&, const Player&);
+    friend ostream& operator << (ostream&, const Player&);
 
 private:
 	string  name;					// the player's name
