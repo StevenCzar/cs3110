@@ -21,15 +21,15 @@ int main()
 	int p1Suit, p2Suit;
 
 	//read in names and instantiate players
-	string name = "wads";
-	string what;
+	string name;
 	int seed;
 	std::fstream something;
+	fstream.open("cardgame.txt");
 	//for file output stuff
 	//std::ostream os;
-	something >> what;
-	std::cout << what;
+	something >> name;
 	Player p1(name);
+	something = "";
 	something >> name;
 	Player p2(name);
 
