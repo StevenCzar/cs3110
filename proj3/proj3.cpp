@@ -23,9 +23,9 @@ int main()
 	//read in names and instantiate players
 	string name = "";
 	int seed;
-	ifstream something;
+	std::ifstream something;
 	//for file output stuff
-	ostream os;
+	std::ostream os;
 	something >> name;
 	Player p1(name);
 	name = "";
@@ -138,7 +138,7 @@ int main()
 		std::cout << "(" << p1.getScore() << ") - ";
 		std::cout << p2.getName() << "  ";
 		os << p2;
-		std:cout << "(" << p2.getScore() << ")\n";
+		std::cout << "(" << p2.getScore() << ")\n";
 		//draw back to 3
 		p1.drawCard(deck);
 		p2.drawCard(deck);
