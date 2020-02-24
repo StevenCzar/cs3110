@@ -97,7 +97,7 @@ bool Card::operator > (const Card& cd) const
 		{
 			return false;
 		}
-		return true
+		return true;
 	}
 	return false;
 }
