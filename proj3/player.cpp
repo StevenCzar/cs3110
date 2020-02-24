@@ -19,22 +19,212 @@ Player::Player(string pname)
 
 Card Player::playCard()
 {
-	//compare cards 1-2, 2-3, and 1-3, play highest value
-	if((hand[0] > hand[1])&&(hand[0]>hand[2]))
+	//oh no here i go making it difficult again
+	int h1Suit, h2Suit;
+	//if A > B ...
+	if(hand[0] > hand[1])
 	{
-		hasPlayed[0] = true;
-		return hand[0];
+		//comp A-C
+		if(hand[0] > hand[2])
+		{
+			//play A
+			hasPlayed[0] = true;
+			return hand[0];
+		}
+		else if(hand[0] < hand[2])
+		{
+			//play C
+			hasPlayed[2] = true;
+			return hand[2];
+		}
+		else
+		{
+			//comp A-C suit
+			if(hand[0].getSuit() == diamonds)
+			{
+				h1Suit = 4;
+			}
+			else if(hand[0].getSuit() == spades)
+			{
+				h1Suit = 3;
+			}
+			else if(hand[0].getSuit() == hearts)
+			{
+				h1Suit = 2;
+			}
+			else
+			{
+				h1Suit = 1;
+			}
+			//make it stop
+			if(hand[2].getSuit() == diamonds)
+			{
+				h2Suit = 4;
+			}
+			else if(hand[2].getSuit() == spades)
+			{
+				h2Suit = 3;
+			}
+			else if(hand[2].getSuit() == hearts)
+			{
+				h2Suit = 2;
+			}
+			else
+			{
+				h2Suit = 1;
+			}
+
+			//finally over
+			if(h1Suit > h2Suit)
+			{
+				//play A
+				hasPlayed[0] = true;
+				return hand[0];
+			}
+			else
+			{
+				//play C
+				hasPlayed[2] = true;
+				return hand[2];
+			}
+		}
 	}
-	else if((hand[1] > hand[2])&&(hand[1]>hand[0]))
+	else if(hand[0] < hand[1])
 	{
-		hasPlayed[1] = true;
-		return hand[1];
+		//comp B-C
+		if(hand[1] > hand[2])
+		{
+			//play B
+			hasPlayed[1] = true;
+			return hand[1];
+		}
+		else if(hand[1] < hand[2])
+		{
+			//play C
+			hasPlayed[2] = true;
+			return hand[2];
+		}
+		else
+		{
+			//comp B-C suit
+			if(hand[1].getSuit() == diamonds)
+			{
+				h1Suit = 4;
+			}
+			else if(hand[1].getSuit() == spades)
+			{
+				h1Suit = 3;
+			}
+			else if(hand[1].getSuit() == hearts)
+			{
+				h1Suit = 2;
+			}
+			else
+			{
+				h1Suit = 1;
+			}
+			//make it stop
+			if(hand[2].getSuit() == diamonds)
+			{
+				h2Suit = 4;
+			}
+			else if(hand[2].getSuit() == spades)
+			{
+				h2Suit = 3;
+			}
+			else if(hand[2].getSuit() == hearts)
+			{
+				h2Suit = 2;
+			}
+			else
+			{
+				h2Suit = 1;
+			}
+
+			//finally over
+			if(h1Suit > h2Suit)
+			{
+				//play B
+				hasPlayed[1] = true;
+				return hand[1];
+			}
+			else
+			{
+				//play C
+				hasPlayed[2] = true;
+				return hand[2];
+			}
+		}
 	}
-	else if((hand[2] > hand[1])&&(hand[2] > hand[0]))
+	else
 	{
-		hasPlayed[2] = true;
-		return hand[2];
+		//comp A-C
+		if(hand[0] > hand[2])
+		{
+			//comp A-B suit
+			if(hand[0].getSuit() == diamonds)
+			{
+				h1Suit = 4;
+			}
+			else if(hand[0].getSuit() == spades)
+			{
+				h1Suit = 3;
+			}
+			else if(hand[0].getSuit() == hearts)
+			{
+				h1Suit = 2;
+			}
+			else
+			{
+				h1Suit = 1;
+			}
+			//make it stop
+			if(hand[1].getSuit() == diamonds)
+			{
+				h2Suit = 4;
+			}
+			else if(hand[1].getSuit() == spades)
+			{
+				h2Suit = 3;
+			}
+			else if(hand[1].getSuit() == hearts)
+			{
+				h2Suit = 2;
+			}
+			else
+			{
+				h2Suit = 1;
+			}
+
+			//finally over
+			if(h1Suit > h2Suit)
+			{
+				//play A
+				hasPlayed[0] = true;
+				return hand[0];
+			}
+			else
+			{
+				//play B
+				hasPlayed[1] = true;
+				return hand[1];
+			}
+		}
+		else if(hand[0] < hand[2])
+		{
+			//play C
+			hasPlayed[2] = true;
+			return hand[2];
+		}
+		else
+		{
+			//all suits are the same god help you
+			//not trying this just play the first card
+			hasPlayed[0] = true;
+			return hand[0];
+		}
 	}
+	//if this doesn't work somehow... just play first card
 	hasPlayed[0] = true;
 	return hand[0];
 }

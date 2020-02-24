@@ -92,7 +92,7 @@ int main()
 			{
 				p1Suit = 3;
 			}
-			else if(p1Card.getSuit() == spades)
+			else if(p1Card.getSuit() == hearts)
 			{
 				p1Suit = 2;
 			}
@@ -109,7 +109,7 @@ int main()
 			{
 				p2Suit = 3;
 			}
-			else if(p2Card.getSuit() == spades)
+			else if(p2Card.getSuit() == hearts)
 			{
 				p2Suit = 2;
 			}
