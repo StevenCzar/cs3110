@@ -28,6 +28,7 @@ int main()
 	//for file output stuff
 	//std::ostream os;
 	something >> what;
+	std::cout << what;
 	Player p1(name);
 	something >> name;
 	Player p2(name);
