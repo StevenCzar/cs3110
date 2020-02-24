@@ -35,6 +35,7 @@ Card Player::playCard()
 		hasPlayed[2] = true;
 		return hand[2];
 	}
+	hasPlayed[0] = true;
 	return hand[0];
 }
 
