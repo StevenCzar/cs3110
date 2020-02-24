@@ -93,9 +93,9 @@ ostream& operator << (ostream& os, const Player& p)
 {
 	for(int i = 0; i < 3; i++)
 	{
-		if(hasPlayed[i] == false)
+		if(p.hasPlayed[i] == false)
 		{
-			os << hand[i] << "  ";
+			os << p.hand[i] << "  ";
 		}
 		else
 		{
