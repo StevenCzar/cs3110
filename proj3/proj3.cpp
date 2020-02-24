@@ -63,7 +63,7 @@ int main()
 		std::cout << "(" << p1.getScore() << ") - ";
 		std::cout << p2.getName() << "  ";
 		os << p2;
-		std:cout << "(" << p2.getScore() << ")\n";
+		std::cout << "(" << p2.getScore() << ")\n";
 
 		//now play
 		p1Card = p1.playCard();
@@ -143,11 +143,11 @@ int main()
 		p2.drawCard();
 	}
 	//end of game printing now 
-	if(p1.getScore > p2.getScore)
+	if(p1.getScore() > p2.getScore())
 	{
 		std::cout << "Winner: " << p1.getName() << " " << p1.getScore() << std::endl; 
 	}
-	else if(p1.getScore < p2.getScore)
+	else if(p1.getScore() < p2.getScore())
 	{
 		std::cout << "Winner: " << p2.getName() << " " << p2.getScore() << std::endl; 		
 	}
