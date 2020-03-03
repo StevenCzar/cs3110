@@ -40,7 +40,7 @@ int main()
 	cout << "Time taken for b: " << (timerEnd-timerStart)*1.0/CLOCKS_PER_SEC << endl;
 
 	//section for c
-	forward_list fls;
+	forward_list<int> fls;
 	timerStart = clock();
 
 	for(int i = 0; i < 1000000; i++)
