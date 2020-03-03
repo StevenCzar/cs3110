@@ -91,7 +91,10 @@ int main()
 		timerEnd = clock();
 
 		average2 += (timerEnd-timerStart)*1.0/CLOCKS_PER_SEC;
-		stack1.clear();
+		for(int i = 0; i < 500000; i++)
+		{
+			stack1.pop();
+		}
 	}
 	cout << "Average time taken for d-push: " << average/5.0 << endl;
 	average = 0;
@@ -121,7 +124,10 @@ int main()
 		timerEnd = clock();
 
 		average2 += (timerEnd-timerStart)*1.0/CLOCKS_PER_SEC;
-		stack2.clear();
+		for(int i = 0; i < 500000; i++)
+		{
+			stack2.pop();
+		}
 	}
 	cout << "Average time taken for e-push: " << average/5.0 << endl;
 	average = 0;
@@ -150,7 +156,10 @@ int main()
 		timerEnd = clock();
 
 		average2 += (timerEnd-timerStart)*1.0/CLOCKS_PER_SEC;
-		stack3.clear();
+		for(int i = 0; i < 500000; i++)
+		{
+			stack3.pop();
+		}
 	}
 	cout << "Average time taken for f-push: " << average/5.0 << endl;
 	average = 0;
@@ -180,7 +189,10 @@ int main()
 		timerEnd = clock();
 
 		average2 += (timerEnd-timerStart)*1.0/CLOCKS_PER_SEC;
-		queue1.clear();
+		for(int i = 0; i < 500000; i++)
+		{
+			queue1.pop();
+		}
 	}
 	cout << "Average time taken for g-push: " << average/5.0 << endl;
 	average = 0;
@@ -199,7 +211,7 @@ int main()
 
 		timerEnd = clock();
 
-		average1 += (timerEnd-timerStart)*1.0/CLOCKS_PER_SEC;
+		average += (timerEnd-timerStart)*1.0/CLOCKS_PER_SEC;
 
 		timerStart = clock();
 		for(int i = 0; i < 500000; i++)
@@ -238,7 +250,10 @@ int main()
 		timerEnd = clock();
 
 		average2 += (timerEnd-timerStart)*1.0/CLOCKS_PER_SEC;
-		queue3.clear();
+		for(int i = 0; i < 500000; i++)
+		{
+			queue3.pop();
+		}
 	}
 	cout << "Average time taken for i-push: " << average/5.0 << endl;
 	average = 0;
