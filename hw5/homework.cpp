@@ -12,19 +12,26 @@ using namespace std;
 int main()
 {
 	clock_t timerStart, timerEnd;
+	double average = 0;
 	//section for a
 	vector<int> vec;
+	for(int j = 0; j<5; j++)
+		timerStart = clock();
 
-	timerStart = clock();
+		for(int i = 0; i < 1000000; i++)
+		{
+			vec.push_back(rand());
+		}
 
-	for(int i = 0; i < 1000000; i++)
-	{
-		vec.push_back(rand());
+		timerEnd = clock();
+		
+		average += (timerEnd-timerStart)*1.0/CLOCKS_PER_SEC;
+		cout << "Time taken for a: " << (timerEnd-timerStart)*1.0/CLOCKS_PER_SEC << endl;
+		vec.clear();
 	}
 
-	timerEnd = clock();
-
-	cout << "Time taken for a: " << (timerEnd-timerStart)*1.0/CLOCKS_PER_SEC << endl;
+	cout << "Average time taken for a: " << average << endl;
+	average = 0;
 
 	//section for b
 	list<int> ls;
