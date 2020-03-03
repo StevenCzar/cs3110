@@ -16,6 +16,7 @@ int main()
 	//section for a
 	vector<int> vec;
 	for(int j = 0; j<5; j++)
+	{
 		timerStart = clock();
 
 		for(int i = 0; i < 1000000; i++)
@@ -29,7 +30,6 @@ int main()
 		cout << "Time taken for a: " << (timerEnd-timerStart)*1.0/CLOCKS_PER_SEC << endl;
 		vec.clear();
 	}
-
 	cout << "Average time taken for a: " << average << endl;
 	average = 0;
 
