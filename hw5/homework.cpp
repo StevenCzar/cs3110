@@ -32,7 +32,7 @@ int main()
 
 	for(int i = 0; i < 1000000; i++)
 	{
-		ls.push_back(rand());
+		ls.push_front(rand());
 	}
 
 	timerEnd = clock();
@@ -45,7 +45,7 @@ int main()
 
 	for(int i = 0; i < 1000000; i++)
 	{
-		fls.push_back(rand());
+		fls.push_front(rand());
 	}
 
 	timerEnd = clock();
