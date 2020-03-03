@@ -3,6 +3,8 @@
 #include <stack>
 #include <queue>
 #include <list>
+#include <iostream>
+#include <stdlib.h>
 
 using namespace std;
 
