@@ -30,7 +30,7 @@ int main()
 		cout << "Time taken for a: " << (timerEnd-timerStart)*1.0/CLOCKS_PER_SEC << endl;
 		vec.clear();
 	}
-	cout << "Average time taken for a: " << average << endl;
+	cout << "Average time taken for a: " << average/5.0 << endl;
 	average = 0;
 
 	//section for b
