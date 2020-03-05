@@ -9,8 +9,9 @@ class CargoShip : public Ship
 		int total;
 		double foward;
 	public:
+		CargoShip(){}
 		CargoShip(std::string n, double l, int c, double p);
-		~CargoShip
+		~CargoShip();
 		using Ship::fuel;
 		void fuel(int f);
 		using Ship::load;
