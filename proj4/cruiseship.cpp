@@ -1,7 +1,7 @@
 #include "cruiseship.h"
 #include <iostream>
 
-CruiseShip::CruiseShip(string n, double l, double lux, double up, double low)
+CruiseShip::CruiseShip(std::string n, double l, double lux, double up, double low)
 {
 	luxury = lux;
 	upper_deck = up;
