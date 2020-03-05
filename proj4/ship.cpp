@@ -4,12 +4,12 @@
 Ship::Ship(string n, double f)
 {
 	name = n;
-	fuel = f;
+	gas = f;
 }
 
 void Ship::fuel()
 {
-	std::cout << name << " " << fuel << std::endl;
+	std::cout << name << " " << gas << std::endl;
 }
 
 void Ship::sail()

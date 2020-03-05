@@ -6,7 +6,7 @@ class Ship
 {
 	protected:
 		std::string name;
-		double fuel;
+		double gas;
 	public:
 		Ship(std::string, double);
 		void fuel();
