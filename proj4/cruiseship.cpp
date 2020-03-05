@@ -1,4 +1,5 @@
 #include "cruiseship.h"
+#include "ship.h"
 #include <iostream>
 
 CruiseShip::CruiseShip(std::string n, double f, double lux, double up, double low):Ship(n,f)

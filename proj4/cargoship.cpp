@@ -1,4 +1,5 @@
 #include "cargoship.h"
+#include "ship.h"
 #include <iostream>
 
 CargoShip::CargoShip(string n, double l, int c, double p):Ship(n, l)

@@ -1,5 +1,5 @@
-#ifndef CARGO_SHIP.H
-#define CARGO_SHIP
+#ifndef CARGO_SHIP_H
+#define CARGO_SHIP_H
 #include <string>
 
 class CargoShip : public Ship
