@@ -8,7 +8,8 @@ class Ship
 		std::string name;
 		double gas;
 	public:
-		Ship(std::string, double)
+		Ship(){}
+		Ship(std::string, double);
 		void fuel();
 		virtual void sail();
 		virtual void load(int) = 0;
