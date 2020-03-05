@@ -10,7 +10,7 @@ class CruiseShip : public Ship
 		int num_luxury, num_upper, num_lower;
 	public:
 		CruiseShip(){}
-		CruiseShip(std::string n, double f, double, double, double):Ship(n,f);
+		CruiseShip(std::string n, double f, double, double, double);
 		using Ship::sail;
 		void sail();
 		using Ship::load;

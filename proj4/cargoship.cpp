@@ -1,7 +1,7 @@
 #include "cargoship.h"
 #include <iostream>
 
-CargoShip::CargoShip(string n, double l, int c, double p)
+CargoShip::CargoShip(string n, double l, int c, double p):Ship(n, l)
 {
 	acb = new double;
 	fcb = new double;
