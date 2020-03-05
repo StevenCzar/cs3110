@@ -5,10 +5,10 @@
 class Ship
 {
 	protected:
-		string name;
+		std::string name;
 		double fuel;
 	public:
-		Ship(string, double)
+		Ship(std::string, double)
 		void fuel();
 		virtual void sail();
 		virtual void load(int) = 0;
