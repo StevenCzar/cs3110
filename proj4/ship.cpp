@@ -1,7 +1,7 @@
 #include "ship.h"
 #include <iostream>
 
-Ship::Ship(string n, double f)
+Ship::Ship(std::string n, double f)
 {
 	name = n;
 	gas = f;
