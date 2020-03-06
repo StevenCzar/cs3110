@@ -15,17 +15,17 @@ int main()
 	std::fstream something;
 	something.open("ships.txt");
 	something >> name >> load >> luxury >> upper >> lower >> passengers;
-	CruiseShip *cruiseship = new CruiseShip(name, load, luxury, upper, lower);
+	CruiseShip cruiseship(name, load, luxury, upper, lower);
 	something >> name >> load >> tot >> luxury >> tonnage >> flashpoint;
-	CargoShip *cargoship = new CargoShip(name, load, tot, luxury);
+	CargoShip cargoship(name, load, tot, luxury);
 
-	cruiseship->fuel();
-	cruiseship->load(passengers);
-	sailShip(&cruiseship);
+	cruiseship.fuel();
+	cruiseship.load(passengers);
+	sailShip(*cruiseship);
 
-	cargoship->fuel(flashpoint);
-	cargoship->load(tonnage);
-	sailShip(&cargoship);
+	cargoship.fuel(flashpoint);
+	cargoship.load(tonnage);
+	sailShip(*cargoship);
 }
 
 void sailShip(Ship &ship)
