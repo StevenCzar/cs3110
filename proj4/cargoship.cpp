@@ -14,7 +14,7 @@ CargoShip::CargoShip(string n, double l, int c, double p):Ship(n, l)
 
 CargoShip::~CargoShip()
 {
-	delete acb;
+	delete &acb;
 	acb = NULL;
 	delete fcb;
 	fcb = NULL;
