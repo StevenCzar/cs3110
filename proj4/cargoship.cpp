@@ -33,9 +33,9 @@ void CargoShip::load(int t)
 		t = total;
 	}
 
-	fcb = t*foward;
+	*fcb = t*foward;
 	t -= t*foward;
-	acb = t;
+	*acb = t;
 
 	std::cout << name << " " << fcb << " " << acb << std::endl;
 }
