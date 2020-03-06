@@ -19,13 +19,13 @@ int main()
 	something >> name >> load >> passengers >> luxury >> tonnage >> flashpoint;
 	CargoShip *cargoship = new CargoShip(name, load, passengers, luxury);
 
-	cruiseship.fuel();
-	cruiseship.load();
-	shipSail(&cruiseship);
+	cruiseship->fuel();
+	cruiseship->load();
+	shipSail(cruiseship);
 
-	cargoship.fuel(flashpoint);
-	cargoship.load(tonnage);
-	shipSail(&cargoship);
+	cargoship->fuel(flashpoint);
+	cargoship->load(tonnage);
+	shipSail(cargoship);
 }
 
 void sailShip(Ship &ship)
