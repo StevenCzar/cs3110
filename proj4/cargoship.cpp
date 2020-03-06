@@ -15,9 +15,9 @@ CargoShip::CargoShip(string n, double l, int c, double p):Ship(n, l)
 CargoShip::~CargoShip()
 {
 	delete &acb;
-	&acb = NULL;
+	acb = NULL;
 	delete &fcb;
-	&fcb = NULL;
+	fcb = NULL;
 }
 
 void CargoShip::fuel(int f)
@@ -33,8 +33,8 @@ void CargoShip::load(int t)
 		t = total;
 	}
 
-	fcb = t*forward;
-	t -= t*forward;
+	fcb = t*foward;
+	t -= t*foward;
 	acb = t;
 
 	std::cout << name << " " << fcb << " " << acb << std::endl;
