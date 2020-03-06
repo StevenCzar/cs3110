@@ -32,10 +32,10 @@ void CargoShip::load(int t)
 	{
 		t = total;
 	}
-
+	std::cout << "hello" << std::endl;
 	*fcb = t*foward;
 	t -= t*foward;
 	acb = t;
-
+	std::cout << "hello2" << std::endl;
 	std::cout << name << " " << fcb << " " << acb << std::endl;
 }
