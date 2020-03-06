@@ -16,7 +16,7 @@ CargoShip::~CargoShip()
 {
 	delete &acb;
 	acb = NULL;
-	delete fcb;
+	delete &fcb;
 	fcb = NULL;
 }
 
