@@ -21,11 +21,11 @@ int main()
 
 	cruiseship->fuel();
 	cruiseship->load(passengers);
-	sailShip(cruiseship);
+	sailShip(&cruiseship);
 
 	cargoship->fuel(flashpoint);
 	cargoship->load(tonnage);
-	sailShip(cargoship);
+	sailShip(&cargoship);
 }
 
 void sailShip(Ship &ship)
