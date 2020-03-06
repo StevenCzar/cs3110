@@ -4,8 +4,10 @@
 
 CargoShip::CargoShip(string n, double l, int c, double p):Ship(n, l)
 {
-	double * acb = new double(0);
-	double * fcb = new double(0);
+	double *acb;
+	double *fcb;
+	acb = new double(0);
+	fcb = new double(0);
 	total = c;
 	foward = p;
 }
