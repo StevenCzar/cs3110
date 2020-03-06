@@ -4,20 +4,20 @@
 
 CargoShip::CargoShip(string n, double l, int c, double p):Ship(n, l)
 {
-	acb = new double;
-	*acb = 0;
-	fcb = new double;
-	*fcb = 0;
+	double * acb = new double;
+	acb = 0;
+	double * fcb = new double;
+	fcb = 0;
 	total = c;
 	foward = p;
 }
 
 CargoShip::~CargoShip()
 {
-	delete *acb;
-	*acb = NULL;
-	delete *fcb;
-	*fcb = NULL;
+	delete acb;
+	acb = NULL;
+	delete fcb;
+	fcb = NULL;
 }
 
 CargoShip::fuel(int f)
