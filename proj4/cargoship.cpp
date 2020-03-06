@@ -36,5 +36,5 @@ void CargoShip::load(int t)
 	t -= t*foward;
 	*acb = (double)t;
 	std::cout << "hello3" << std::endl;
-	std::cout << name << " " << fcb << " " << acb << std::endl;
+	std::cout << name << " " << *fcb << " " << *acb << std::endl;
 }
