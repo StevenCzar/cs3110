@@ -2,7 +2,7 @@
 #include "ship.h"
 #include <iostream>
 
-CargoShip::CargoShip(string n, double l, int c, double p):Ship(n, l)
+CargoShip::CargoShip(std::string n, double l, int c, double p):Ship(n, l)
 {
 	double *acb;
 	double *fcb;
@@ -15,7 +15,7 @@ CargoShip::CargoShip(string n, double l, int c, double p):Ship(n, l)
 CargoShip::~CargoShip()
 {
 	delete &acb;
-	*acb = NULL;
+	acb = NULL;
 	delete &fcb;
 	fcb = NULL;
 }
