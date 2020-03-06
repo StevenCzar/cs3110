@@ -1,3 +1,8 @@
+/* 	Steven Czarnecki
+	CSCI 3110 - 001
+	Project #4
+	Due: 3/06/20
+*/
 #ifndef CRUISESHIP_H
 #define CRUISESHIP_H
 #include <string>
@@ -11,6 +16,7 @@ class CruiseShip : public Ship
 	public:
 		CruiseShip(){}
 		CruiseShip(std::string n, double f, double, double, double);
+		//using the using for overwriting functions
 		using Ship::sail;
 		void sail();
 		using Ship::load;

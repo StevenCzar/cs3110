@@ -1,3 +1,8 @@
+/* 	Steven Czarnecki
+	CSCI 3110 - 001
+	Project #4
+	Due: 3/06/20
+*/
 #ifndef CARGO_SHIP_H
 #define CARGO_SHIP_H
 #include <string>
