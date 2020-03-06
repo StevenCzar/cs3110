@@ -4,8 +4,6 @@
 
 CargoShip::CargoShip(std::string n, double l, int c, double p):Ship(n, l)
 {
-	double *acb;
-	double *fcb;
 	acb = new double(0);
 	fcb = new double(0);
 	total = c;
@@ -14,9 +12,9 @@ CargoShip::CargoShip(std::string n, double l, int c, double p):Ship(n, l)
 
 CargoShip::~CargoShip()
 {
-	delete &acb;
+	delete acb;
 	acb = NULL;
-	delete &fcb;
+	delete fcb;
 	fcb = NULL;
 }
 

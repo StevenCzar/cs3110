@@ -6,7 +6,8 @@
 class CargoShip : public Ship
 {
 	private:
-		double * fcb, acb;
+		double * fcb;
+		double * acb;
 		int total;
 		double foward;
 	public:
