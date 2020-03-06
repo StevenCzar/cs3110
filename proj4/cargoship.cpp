@@ -4,10 +4,8 @@
 
 CargoShip::CargoShip(string n, double l, int c, double p):Ship(n, l)
 {
-	double * acb = new double;
-	acb = 0;
-	double * fcb = new double;
-	fcb = 0;
+	double * acb = new double(0);
+	double * fcb = new double(0);
 	total = c;
 	foward = p;
 }
@@ -20,13 +18,13 @@ CargoShip::~CargoShip()
 	fcb = NULL;
 }
 
-CargoShip::fuel(int f)
+void CargoShip::fuel(int f)
 {
 	Ship::fuel();
 	std::cout << name << " " << f << std::endl;
 }
 
-CargoShip::load(int t)
+void CargoShip::load(int t)
 {
 	if(t > total)
 	{
