@@ -87,27 +87,27 @@ void Maze::FindExit(int row, int col, bool& found)
 
 //returns where to go next based on the xplor string
 std::pair<int,int> getMove(char dir)
-{
+{	std::pair<int,int> move;
 	//for all directions, check if it's a valid move, then move
 	if(dir == 'N')
 	{
 		//north is row -1 col 0
-		std::pair<int,int> move = std::make_pair(-1, 0);
+		move = std::make_pair(-1, 0);
 	}
 	if(dir == 'S')
 	{
 		//south is row +1 col 0
-		std::pair<int,int> move = std::make_pair(1, 0);
+		move = std::make_pair(1, 0);
 	}
 	if(dir == 'W')
 	{
 		//west is row 0 col -1
-		std::pair<int,int> move = std::make_pair(0, -1);
+		move = std::make_pair(0, -1);
 	}
 	if(dir == 'E')
 	{
 		//east is row 0 col +1
-		std::pair<int,int> move = std::make_pair(0, 1);
+		move = std::make_pair(0, 1);
 	}
 	return move;
 }
