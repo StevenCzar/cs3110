@@ -13,7 +13,7 @@ Maze::Maze(std::ifstream& input)
 	{
 		for(int j = 0; j < maxCols+2; j++)
 		{
-			if(i == 0 || j == 0 || i == maxRows+2 || j == maxCols+2)
+			if(i == 0 || j == 0 || i == maxRows+1 || j == maxCols+1)
 			{
 				//put X's on the border
 				maze[i][j] = 'X';
