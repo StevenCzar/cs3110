@@ -18,6 +18,7 @@ int main()
 	}
 	else
 	{
+		maze.Print();
 		std::cout << "No exit!\n";
 	}
 }
