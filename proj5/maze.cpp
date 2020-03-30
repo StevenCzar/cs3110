@@ -91,7 +91,7 @@ void Maze::FindExit(int row, int col, bool& found)
 }
 
 //returns where to go next based on the xplor string
-std::pair<int,int> getMove(char dir)
+std::pair<int,int> Maze::getMove(char dir)
 {	
 	int r_offset, c_offset;
 	std::pair<int,int> something;
