@@ -73,7 +73,7 @@ void Maze::FindExit(int row, int col, bool& found)
 		{
 			//uses string.at to parse through string
 			//gets the duple for the next location to move
-			std::pair<int,int> move = getMove('N');
+			std::pair<int,int> move = getMove(xplor.at(i));
 			//move to the next space and attempt to find exit
 			FindExit(row+move.first, col+move.second, found);
 			//if you found the exit previously, keep leaving function
@@ -88,7 +88,8 @@ void Maze::FindExit(int row, int col, bool& found)
 
 //returns where to go next based on the xplor string
 std::pair<int,int> getMove(char dir)
-{	std::pair<int,int> move;
+{	
+	std::pair<int,int> move;
 	//for all directions, check if it's a valid move, then move
 	if(dir == 'N')
 	{
