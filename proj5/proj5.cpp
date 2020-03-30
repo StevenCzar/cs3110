@@ -1,6 +1,7 @@
 #include "maze.h"
 #include <fstream>
 #include <string>
+#include <iostream>
 
 int main()
 {
