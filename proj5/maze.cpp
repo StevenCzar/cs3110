@@ -19,7 +19,10 @@ Maze::Maze(std::ifstream& input)
 				maze[i][j] = 'X';
 			}
 			//otherwise put the char in the maze
-			input >> maze[i][j];
+			else
+			{
+				input >> maze[i][j];
+			}
 		}
 	}
 }
