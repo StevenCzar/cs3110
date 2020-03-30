@@ -101,7 +101,6 @@ std::pair<int,int> Maze::getMove(char dir)
 	{
 		//north is row -1 col 0
 		r_offset = -1, c_offset = 0;
-
 	}
 	if(dir == 'S')
 	{
