@@ -1,9 +1,9 @@
 CC=g++
 CFLAGS=-c -g -O0 -std=c++11 -Wall
 LDFLAGS=
-SOURCES=ship.cpp cruiseship.cpp cargoship.cpp proj4.cpp
+SOURCES=maze.cpp proj5.cpp
 OBJECTS=$(SOURCES:.cpp=.o)
-EXECUTABLE=proj4
+EXECUTABLE=proj5
 
 all: $(SOURCES) $(EXECUTABLE)
 
