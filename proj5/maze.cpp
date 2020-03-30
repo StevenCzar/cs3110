@@ -40,7 +40,7 @@ void Maze::Print()
 //check to find the exit and move to the next space if haven't
 void Maze::FindExit(int row, int col, bool& found)
 {
-	std::pair<int,int> move;
+	
 	//check if you moved onto an x, if so, move back
 	if(maze[row][col] == 'X')
 	{
@@ -73,7 +73,7 @@ void Maze::FindExit(int row, int col, bool& found)
 		{
 			//uses string.at to parse through string
 			//gets the duple for the next location to move
-			move = getMove(xplor.at(i));
+			std::pair<int,int> move = getMove('N');
 			//move to the next space and attempt to find exit
 			FindExit(row+move.first, col+move.second, found);
 			//if you found the exit previously, keep leaving function
