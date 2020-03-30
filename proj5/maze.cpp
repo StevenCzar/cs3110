@@ -86,6 +86,7 @@ void Maze::FindExit(int row, int col, bool& found)
 				return;
 			}
 		}
+		return;
 	}
 	return;
 }
