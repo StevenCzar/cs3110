@@ -31,9 +31,9 @@ Maze::Maze(std::ifstream& input)
 void Maze::Print()
 {
 	std::cout << "Maze state: \n";
-	for(int i = 0; i < maxRows+2; i++)
+	for(int i = 1; i < maxRows+1; i++)
 	{
-		for(int j = 0; j < maxCols+2; j++)
+		for(int j = 1; j < maxCols+1; j++)
 		{
 			std::cout << maze[i][j];
 		}
