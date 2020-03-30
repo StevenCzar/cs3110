@@ -21,7 +21,6 @@ Maze::Maze(std::ifstream& input)
 			input >> maze[i][j];
 		}
 	}
-	//print maze initially
 }
 
 //prints the maze... wow
@@ -47,6 +46,8 @@ void Maze::FindExit(int row, int col, bool& found)
 	{
 		return;
 	}
+	//print maze state
+	Print();
 	//say what tile you're exploring
 	//if you're exploring tile 1,1, say it is starting tile
 	if(row == 1 && col == 1)
