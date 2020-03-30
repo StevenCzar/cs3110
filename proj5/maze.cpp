@@ -1,5 +1,6 @@
 #include "maze.h"
 #include <iostream>
+#include <utility>
 
 Maze::Maze(std::ifstream& input)
 {
