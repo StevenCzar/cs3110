@@ -15,10 +15,10 @@ Maze::Maze(std::ifstream& input)
 			if(i == 0 || j == 0 || i == maxRows+2 || j == maxCols+2)
 			{
 				//put X's on the border
-				maze[i,j] = 'X';
+				maze[i][j] = 'X';
 			}
 			//otherwise put the char in the maze
-			input >> maze[i,j];
+			input >> maze[i][j];
 		}
 	}
 	//print maze initially
@@ -32,7 +32,7 @@ void Maze::Print()
 	{
 		for(int j = 1; j < maxCols+1; j++)
 		{
-			std::cout << maze[i,j];
+			std::cout << maze[i][j];
 		}
 		std::cout << "\n";
 	}
@@ -43,7 +43,7 @@ void Maze::FindExit(int row, int col, bool& found)
 {
 	
 	//check if you moved onto an x, if so, move back
-	if(maze[row, col] == 'X')
+	if(maze[row][col] == 'X')
 	{
 		return;
 	}
@@ -55,7 +55,7 @@ void Maze::FindExit(int row, int col, bool& found)
 	}
 	std::cout << "Exploring " << row << "," << col << "\n";
 	//check if you found the exit
-	if(maze[row, col] == 'E')
+	if(maze[row][col] == 'E')
 	{
 		found = true;
 		return;
@@ -63,7 +63,7 @@ void Maze::FindExit(int row, int col, bool& found)
 
 	//if you make it to this point, it means you have a valid move
 	//make the tile you're on a * and then attempt to move
-	maze[row, col] = '*';
+	maze[row][col] = '*';
 	//if you haven't found the exit...
 	while(found!=true)
 	{
@@ -74,7 +74,7 @@ void Maze::FindExit(int row, int col, bool& found)
 			//gets the duple for the next location to move
 			std::pair<int,int> move = getMove(xplor.at(i));
 			//move to the next space and attempt to find exit
-			FindExit(row+move.first, col+move.second);
+			FindExit(row+move.first, col+move.second, found);
 			//if you found the exit previously, keep leaving function
 			if(found == true)
 			{
