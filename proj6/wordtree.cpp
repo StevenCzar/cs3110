@@ -98,6 +98,7 @@ void WordTree::deleteSubTree(TreeNode *node)
 		deleteSubTree(node->right);
 	}
 	//otherwise you're at current node, delete
+	std::cout << "deleting node" << std::endl;
 	delete node;
 	node = NULL;
 }
