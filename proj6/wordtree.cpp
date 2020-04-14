@@ -17,10 +17,7 @@ WordTree::~WordTree()
 	//do postorder traversal of tree and delete nodes as you go
 	//do left-right-root
 	std::cout << "calling destructor" << std::endl;
-	while(root!=NULL)
-	{
-		deleteSubTree(root);
-	}
+	deleteSubTree(root);
 }
 
 void WordTree::addWord(TreeNode *&node, std::string word)
