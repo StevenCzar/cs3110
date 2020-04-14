@@ -142,15 +142,15 @@ void WordTree::findWord(std::string word)
 	//set node to be at the root
 	node = root;
 	//while word isn't found and left and right are both not null
-	while((node->value != word) && (node!=NULL))
+	while((node->value != word) && (node!=NULL)
 	{
 		//if less than, go left if you can go left
-		if(node->value < word)
+		if(node->value < word && node->left != NULL)
 		{
 			node = node->left;
 		}
 		//if greater than, go right if you can go right
-		else if(node->value > word)
+		else if(node->value > word && node->right != NULL)
 		{
 			node = node->right;
 		}
