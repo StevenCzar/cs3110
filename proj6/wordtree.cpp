@@ -16,7 +16,6 @@ WordTree::~WordTree()
 {
 	//do postorder traversal of tree and delete nodes as you go
 	//do left-right-root
-	std::cout << "calling destructor" << std::endl;
 	deleteSubTree(root);
 }
 
@@ -95,7 +94,6 @@ void WordTree::deleteSubTree(TreeNode *node)
 		deleteSubTree(node->right);
 	}
 	//otherwise you're at current node, delete
-	std::cout << "deleting node" << std::endl;
 	delete node;
 	node = NULL;
 }
@@ -143,7 +141,6 @@ void WordTree::findWord(std::string word)
 	//while word isn't found and left and right are both not null
 	while((node->value != word) && (node!=NULL))
 	{
-		std::cout << node->value << std::endl;
 		//if less than, go left if you can go left
 		if((node->value > word) && (node->left != NULL))
 		{
@@ -170,7 +167,7 @@ void WordTree::findWord(std::string word)
 	}
 	else
 	{
-		std::cout << "The word '" << word << " was not found in the text\n";
+		std::cout << "The word '" << word << "' was not found in the text\n";
 	}
 	//deallocate space for traversal node
 	delete node;

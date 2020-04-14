@@ -45,7 +45,6 @@ int main()
 	{
 		//read char and move past the space
 		getline(something, select, ' ');
-		std::cout << select << std::endl;
 
 		if(select == "C")
 		{
