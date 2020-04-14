@@ -28,7 +28,7 @@ int main()
 	{
 		//getline arguments are string, max bit size, char delim
 		//so making the delim an empty space will split up input
-		something.getline(word, 256, " ");
+		something.getline(word, 256, ' ');
 		//convert to lowercase
 		std::transform(word.begin(), word.end(), word.begin(), ::tolower);
 		//add word to tree
@@ -45,7 +45,7 @@ int main()
 	{
 		//read char and move past the space
 		something.get(select);
-		something.ignore(40, " ");
+		something.ignore(40, ' ');
 
 		if(select == 'C')
 		{
