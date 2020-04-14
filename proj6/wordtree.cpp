@@ -6,7 +6,6 @@
 
 #include "wordtree.h"
 #include <iostream>
-#include <algorithm>
 
 WordTree::WordTree()
 {
