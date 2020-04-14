@@ -7,14 +7,9 @@
 #include "wordtree.h"
 #include <iostream>
 
-WordTree::WordTree()
+WordTree::WordTree() : root(NULL)
 {
-	//init blank tree with empty string
-	value = "";
-	left = NULL;
-	right = NULL;
-	count = 0;
-	root = NULL;
+	//default constructor sets root to NULL
 }
 
 WordTree::~WordTree()
@@ -32,7 +27,11 @@ void WordTree::addWord(TreeNode *&node, std::string word)
 	//check to see if node has empty string in it first
 	if(node == NULL)
 	{
-		node = new TreeNode(word, NULL, NULL, 1);
+		node = new TreeNode;
+		node->value = word;
+		node->left = NULL;
+		node->right = NULL;
+		node->count = 1;
 	}
 	//otherwise you're adding a node
 	else
@@ -54,7 +53,11 @@ void WordTree::addWord(TreeNode *&node, std::string word)
 			//if there is no node there, add it
 			else
 			{
-				node->left = new TreeNode(word, NULL, NULL, 1);
+				node->left = new TreeNode;
+				node->left->value = word;
+				node->left->left = NULL;
+				node->left->right = NULL;
+				node->left->count = 1;
 			}
 		}
 		//else it is larger...
@@ -68,7 +71,11 @@ void WordTree::addWord(TreeNode *&node, std::string word)
 			//if there is not a node there, add it
 			else
 			{
-				node->right = new TreeNode(word, NULL, NULL, 1);
+				node->right = new TreeNode;
+				node->right->value = word;
+				node->right->left = NULL;
+				node->right->right = NULL;
+				node->right->count = 1;
 			}
 		}
 	}
