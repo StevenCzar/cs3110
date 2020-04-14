@@ -10,6 +10,10 @@
 WordTree::WordTree()
 {
 	//init blank tree with empty string
+	value = "";
+	left = NULL;
+	right = NULL;
+	count = 0;
 	root = NULL;
 }
 
