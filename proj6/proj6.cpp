@@ -45,6 +45,7 @@ int main()
 	{
 		//read char and move past the space
 		something.get(select);
+		std::cout << select << std::endl;
 		something.ignore(40, ' ');
 
 		if(select == 'C')
