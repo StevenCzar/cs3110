@@ -28,7 +28,7 @@ int main()
 	{
 		//getline arguments are string, max bit size, char delim
 		//so making the delim an empty space will split up input
-		something.getline(word, 256, ' ');
+		std::something.getline(word, 256, ' ');
 		//convert to lowercase
 		std::transform(word.begin(), word.end(), word.begin(), ::tolower);
 		//add word to tree
