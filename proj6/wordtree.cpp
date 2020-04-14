@@ -37,10 +37,10 @@ void WordTree::addWord(TreeNode *&node, std::string word)
 		if(node->value == word)
 		{
 			//increase count
-			node->count+=1
+			node->count+=1;
 		}
 		//check less than
-		else if(word < node.value)
+		else if(word < node->value)
 		{
 			//if there is a node there, go there
 			if(node->left!=NULL)
