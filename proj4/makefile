@@ -1,7 +1,7 @@
 CC=g++
 CFLAGS=-c -g -O0 -std=c++11 -Wall
 LDFLAGS=
-SOURCES=maze.cpp proj5.cpp
+SOURCES=wordtree.cpp proj6.cpp
 OBJECTS=$(SOURCES:.cpp=.o)
 EXECUTABLE=proj5
 

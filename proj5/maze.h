@@ -1,3 +1,8 @@
+/* 	Steven Czarnecki
+	CSCI 3110 - 001
+	Project #5
+	Due: 4/02/20
+*/
 #ifndef MAZE_H
 #define MAZE_H
 #include <fstream> 

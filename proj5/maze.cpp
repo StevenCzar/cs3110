@@ -1,3 +1,8 @@
+/* 	Steven Czarnecki
+	CSCI 3110 - 001
+	Project #5
+	Due: 4/02/20
+*/
 #include "maze.h"
 #include <iostream>
 #include <utility>
@@ -86,6 +91,7 @@ void Maze::FindExit(int row, int col, bool& found)
 				return;
 			}
 		}
+		//if you haven't found a valid move, go back 1 level
 		return;
 	}
 	return;
