@@ -106,7 +106,7 @@ void WordTree::getCounts(TreeNode * node, int threshold, int& number) const
 	//if the count is greater than number of occurances, add 1 to number and print info on what it was
 	if(node->count >= threshold)
 	{
-		std::cout << word << "(" << node->count << ")\n";
+		std::cout << value << "(" << node->count << ")\n";
 		number += 1;
 	}
 	//see if node is on the right
@@ -131,7 +131,7 @@ void WordTree::findWord(std::string word)
 	//set node to be at the root
 	node = root;
 	//while word isn't found and left and right are both not null
-	while(node->value != word && (node->left && node->right)!=NULL)
+	while(node->value != word && (node->left!=NULL && node->right!=NULL)
 	{
 		//if less than, go left if you can go left
 		if(node->value < word && node->left != NULL)
@@ -172,5 +172,5 @@ void WordTree::getCounts(int threshold)
 	int number = 0;
 	getCounts(root, threshold, number);
 	//print final statement
-	std::cout << number << " nodes had words with " << threshold << " or more occurance(s).\n"
+	std::cout << number << " nodes had words with " << threshold << " or more occurance(s).\n";
 }
