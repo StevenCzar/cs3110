@@ -54,7 +54,7 @@ int main()
 			std::cout << "Finding all words with " << threshold << " or more occurances: \n";
 			tree.getCounts(threshold);
 		}
-		else if(select == "F")
+		if(select == "F")
 		{
 			//get the word and call findWord
 			something >> word;
