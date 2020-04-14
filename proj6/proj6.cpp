@@ -53,6 +53,9 @@ int main()
 			something >> threshold;
 			std::cout << "Finding all words with " << threshold << " or more occurances: \n";
 			tree.getCounts(threshold);
+
+			//move past newline char
+			something.ignore(40, '\n');
 		}
 		if(select == "F")
 		{
@@ -60,11 +63,9 @@ int main()
 			something >> word;
 			std::cout << "Searching for occurrences of the word '" << word << "'\n";
 			tree.findWord(word);
-		}
-		else
-		{
-			//error message
-			std::cout << "Dunno how you got here but there's an invalid selection\n\n";
+
+			//move past newline char
+			something.ignore(40, '\n');
 		}
 	}
 }
