@@ -37,7 +37,7 @@ int main()
 	//initial output
 	std::cout << "word tree built and loaded\n\n";
 	//now begin 2nd file read
-	something.close("input.txt");
+	something.close();
 	something.open("queries.txt");
 
 	//while reading from queries.txt...
