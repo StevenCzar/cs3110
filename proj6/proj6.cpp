@@ -16,7 +16,7 @@ int main()
 	//init
 	std::ifstream something;
 	std::string word;
-	char select;
+	std::string select;
 	int threshold;
 	something.open("input.txt");
 
@@ -44,18 +44,17 @@ int main()
 	while(something)
 	{
 		//read char and move past the space
-		something.get(select);
+		getline(something, select, ' ')
 		std::cout << select << std::endl;
-		something.ignore(40, ' ');
 
-		if(select == 'C')
+		if(select == "C")
 		{
 			//get the threshold and call getCounts
 			something >> threshold;
 			std::cout << "Finding all words with " << threshold << " or more occurances: \n";
 			tree.getCounts(threshold);
 		}
-		else if(select == 'F')
+		else if(select == "F")
 		{
 			//get the word and call findWord
 			something >> word;
