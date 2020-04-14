@@ -26,9 +26,9 @@ int main()
 	//while reading from input.txt...
 	while(something)
 	{
-		//getline arguments are string, max bit size, char delim
+		//getline arguments are istream, string, and delim char
 		//so making the delim an empty space will split up input
-		something.getline(word, 256, ' ');
+		getline(something, word, ' ');
 		//convert to lowercase
 		std::transform(word.begin(), word.end(), word.begin(), ::tolower);
 		//add word to tree
