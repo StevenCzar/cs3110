@@ -155,7 +155,7 @@ void WordTree::findWord(std::string word)
 		{
 			//if you make it here, it means you had to go a direction but there wasn't a node there
 			//thus not found word
-			std::cout << "The word '" << word << "' was not found in the text\n";
+			std::cout << "The word '" << word << "' was not found in the text\n\n";
 			return;
 		}
 	}
@@ -163,11 +163,11 @@ void WordTree::findWord(std::string word)
 	//or both the children are null
 	if(node->value == word)
 	{
-		std::cout << "The word '" << word << "' occurs " << node->count << " time(s) in the text\n";
+		std::cout << "The word '" << word << "' occurs " << node->count << " time(s) in the text\n\n";
 	}
 	else
 	{
-		std::cout << "The word '" << word << "' was not found in the text\n";
+		std::cout << "The word '" << word << "' was not found in the text\n\n";
 	}
 	//deallocate space for traversal node
 	delete node;
@@ -180,5 +180,5 @@ void WordTree::getCounts(int threshold)
 	int number = 0;
 	getCounts(root, threshold, number);
 	//print final statement
-	std::cout << number << " nodes had words with " << threshold << " or more occurance(s).\n";
+	std::cout << number << " nodes had words with " << threshold << " or more occurance(s).\n\n";
 }
