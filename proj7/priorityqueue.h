@@ -46,8 +46,6 @@ private:
 	std::vector<T> myVec;
 	C compare;
 	int size;
-
-
 	void heapUp(int index)
 	{
 		T holder;
@@ -63,8 +61,8 @@ private:
 
 	void heapDown(int index)
 	{	
-		int holder
-		T holding
+		int holder;
+		T holding;
 		if(index*2+1 <= size && compare.comparison(myVec[index], myVec[index*2+1]))
 		{
 			holder = index*2+1;
@@ -75,7 +73,7 @@ private:
 		}
 		if(index*2+2 <= size && compare.comparison(myVec[holder],myVec[index*2+2]))
 		{
-			holder = right;
+			holder = index*2+2;
 		}
 		if(holder != index)
 		{

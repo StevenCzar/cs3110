@@ -1,8 +1,9 @@
 #include "card.h"
 #include "priorityqueue.h"
+#include <algorithm>
 
 Card hearts[13], spades[13];
-Priorityqueue plswork;
+PriorityQueue plswork;
 
 for(int i = 0; i<13; i++)
 {
