@@ -27,10 +27,10 @@ public:
     friend ostream& operator << (ostream& os, const Card& cd);
 
     // compare and return true if *this has a lesser point value than cd, false otherwise
-	bool operator < (const Card& cd) const;
+	bool operator <= (const Card& cd) const;
 
     // compare and return true if *this has a larger point value than cd, false otherwise
-	bool operator > (const Card& cd) const;
+	bool operator >= (const Card& cd) const;
 
     // compare and return true if *this has the same point value as cd, false otherwise
 	bool operator== (const Card& cd) const;
