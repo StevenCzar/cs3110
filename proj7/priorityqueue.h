@@ -1,4 +1,5 @@
 #include "card.h"
+#include <vector>
 
 template <typename T, typename C>
 class PriorityQueue

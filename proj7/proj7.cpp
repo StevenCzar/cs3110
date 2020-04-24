@@ -1,7 +1,7 @@
 #include "card.h"
 #include "priorityqueue.h"
 
-Card hearts[13], spades[13]
+Card hearts[13], spades[13];
 Priorityqueue plswork;
 
 for(int i = 0; i<13; i++)
