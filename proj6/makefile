@@ -1,9 +1,9 @@
 CC=g++
 CFLAGS=-c -g -O0 -std=c++11 -Wall
 LDFLAGS=
-SOURCES=wordtree.cpp proj6.cpp
+SOURCES=card.cpp proj7.cpp
 OBJECTS=$(SOURCES:.cpp=.o)
-EXECUTABLE=proj6
+EXECUTABLE=proj7
 
 all: $(SOURCES) $(EXECUTABLE)
 

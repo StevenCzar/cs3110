@@ -1,7 +1,7 @@
 /* 	Steven Czarnecki
 	CSCI 3110 - 001
 	Project #6
-	Due: 4/02/20
+	Due: 4/14/20
 */
 
 #include "wordtree.h"
@@ -156,6 +156,9 @@ void WordTree::findWord(std::string word)
 			//if you make it here, it means you had to go a direction but there wasn't a node there
 			//thus not found word
 			std::cout << "The word '" << word << "' was not found in the text\n\n";
+			//deallocate memory before returning if it makes it here
+			delete node;
+			node = NULL;
 			return;
 		}
 	}
@@ -169,7 +172,7 @@ void WordTree::findWord(std::string word)
 	{
 		std::cout << "The word '" << word << "' was not found in the text\n\n";
 	}
-	//deallocate space for traversal node
+	//deallocate space for traversal node for normal stuff
 	delete node;
 	node = NULL;
 }

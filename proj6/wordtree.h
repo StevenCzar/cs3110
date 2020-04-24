@@ -1,7 +1,7 @@
 /* 	Steven Czarnecki
 	CSCI 3110 - 001
 	Project #6
-	Due: 4/02/20
+	Due: 4/14/20
 */
 #ifndef WORDTREE_H
 #define WORDTREE_H
