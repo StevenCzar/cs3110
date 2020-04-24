@@ -16,7 +16,7 @@ public:
 		myVec[0] = myVec[size-1];
 		myVec.pop_back();
 		size--;
-		heapDown(size-1);
+		heapDown(0);
 	}
 	void enqueue(T card)
 	{
@@ -63,7 +63,7 @@ private:
 	{	
 		int holder;
 		T holding;
-		if(index*2+1 <= size-1 && compare.comparison(myVec[index*2+1], myVec[index]))
+		if(index*2+1 <= size-1 && compare.comparison(myVec[index], myVec[index*2+1]))
 		{
 			holder = index*2+1;
 		}
@@ -71,7 +71,7 @@ private:
 		{
 			holder = index;
 		}
-		if(index*2+2 <= size-1 && compare.comparison(myVec[index*2+2],myVec[index]))
+		if(index*2+2 <= size-1 && compare.comparison(myVec[holder],myVec[index*2+2]))
 		{
 			holder = index*2+2;
 		}
