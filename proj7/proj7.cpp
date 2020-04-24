@@ -45,6 +45,5 @@ int main()
 		lowprio.dequeue();
 		lowprio.print();
 	}
-	
 	std::cout << "Min Heap Empty\n";
 }
