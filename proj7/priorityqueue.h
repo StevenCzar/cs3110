@@ -89,12 +89,12 @@ template <typename T>
 class lessThan
 {
 public:
-	bool comparison(T first, T second){return(first<=second)}
+	bool comparison(T first, T second){return(first<=second);}
 };
 
 template <typename T>
 class greaterThan
 {
 public:
-	bool comparison(T first, T second){return(first>=second)}
+	bool comparison(T first, T second){return(first>=second);}
 };
