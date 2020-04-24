@@ -4,7 +4,10 @@
 
 Card heartsDeck[13];
 Card spadesDeck[13];
-PriorityQueue<Card> plswork;
+lessThan less;
+greaterThan great;
+PriorityQueue<Card, less> lowprio;
+PriorityQueue<Card, great> highprio;
 
 for(int i = 0; i<13; i++)
 {
@@ -17,17 +20,22 @@ std::random_shuffle(std::begin(spadesDeck), std::end(spadesDeck));   // spades i
 
 for(int i=0; i<13; i++)
 {
-	plswork.enqueue(spadesDeck[i]);
-	plswork.print();
+	highprio.enqueue(spadesDeck[i]);
+	highprio.print();
 }
 
 for(int i=0; i<13; i++)
 {
-	plswork.dequeue(i);
+	highprio.dequeue(i);
 }
 
 for(int i=0; i<13; i++)
 {
-	plswork.enqueue(heartsDeck[i]);
-	plswork.print();
+	lowprio.enqueue(heartsDeck[i]);
+	lowprio.print();
+}
+
+for(int i=0; i<13; i++)
+{
+	lowprio.dequeue(i);
 }
