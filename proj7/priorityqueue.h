@@ -13,7 +13,7 @@ public:
 	void dequeue()
 	{
 		std::cout << "Dequeued " << myVec[0] << '\t';
-		myVec[0] = myVec[size];
+		myVec[0] = myVec[size-1];
 		myVec.pop_back();
 		size--;
 		heapDown(size);
