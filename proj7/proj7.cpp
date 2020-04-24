@@ -24,22 +24,26 @@ int main()
 		highprio.enqueue(spadesDeck[i]);
 		highprio.print();
 	}
+	std::cout << "\n";
 
 	for(int i=0; i<13; i++)
 	{
 		highprio.dequeue();
 		highprio.print();
 	}
+	std::cout << "Max Heap Empty\n";
 
 	for(int i=0; i<13; i++)
 	{
 		lowprio.enqueue(heartsDeck[i]);
 		lowprio.print();
 	}
+	std::cout << "\n";
 
 	for(int i=0; i<13; i++)
 	{
 		lowprio.dequeue();
 		lowprio.print();
 	}
+	std::cout << "Min Heap Empty\n";
 }
