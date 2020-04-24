@@ -4,12 +4,12 @@ template <typename T, typename C>
 class PriorityQueue
 {
 public:
-	PriorityQueue();
+	PriorityQueue()
 	{
 		myVec.resize(50);
 		size = 0;
 	}
-	void dequeue();
+	void dequeue()
 	{
 		std::cout << "Dequeued " << myVec[0] << '\t';
 		myVec[0] = myVec[size];
@@ -17,7 +17,7 @@ public:
 		size--;
 		heapDown(size);
 	}
-	void enqueue(T card);
+	void enqueue(T card)
 	{
 		//increment size first so element 1 is 1 for tree math 
 		std::cout << "Enqueued " << card << '\t';
@@ -33,7 +33,7 @@ public:
 		}
 		return false;
 	}
-	void print();
+	void print()
 	{
 		for(int i = 0; i < size; i++)
 		{
