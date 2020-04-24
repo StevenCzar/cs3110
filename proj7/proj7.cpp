@@ -17,7 +17,7 @@ int main()
 	PriorityQueue<Card, lessThan<Card>> lowprio;
 	PriorityQueue<Card, greaterThan<Card>> highprio;
 
-	fstream something;
+	std::fstream something;
 	int seed;
 
 	//init things
