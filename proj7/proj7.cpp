@@ -28,6 +28,7 @@ int main()
 	for(int i=0; i<13; i++)
 	{
 		highprio.dequeue();
+		highprio.print();
 	}
 
 	for(int i=0; i<13; i++)
@@ -39,5 +40,6 @@ int main()
 	for(int i=0; i<13; i++)
 	{
 		lowprio.dequeue();
+		lowprio.print();
 	}
 }

@@ -22,8 +22,8 @@ public:
 	{
 		//increment size first so element 1 is 1 for tree math 
 		std::cout << "Enqueued " << card << '\t';
-		size++;
 		myVec[size] = card;
+		size++;
 		heapUp(size);	
 	}
 	bool empty()
