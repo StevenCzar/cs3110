@@ -4,8 +4,8 @@
 
 Card heartsDeck[13];
 Card spadesDeck[13];
-lessThan less;
-greaterThan great;
+lessThan<Card> less;
+greaterThan<Card> great;
 PriorityQueue<Card, less> lowprio;
 PriorityQueue<Card, great> highprio;
 
