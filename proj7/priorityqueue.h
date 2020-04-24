@@ -16,7 +16,7 @@ public:
 		myVec[0] = myVec[size-1];
 		myVec.pop_back();
 		size--;
-		heapDown(size);
+		heapDown(size-1);
 	}
 	void enqueue(T card)
 	{
