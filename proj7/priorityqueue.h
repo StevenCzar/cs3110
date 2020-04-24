@@ -24,7 +24,7 @@ public:
 		std::cout << "Enqueued " << card << '\t';
 		myVec[size] = card;
 		size++;
-		heapUp(size);	
+		heapUp(size-1);	
 	}
 	bool empty()
 	{
@@ -50,7 +50,7 @@ private:
 	{
 		T holder;
 		//integer math ensures that it will work
-		if(index!=0 && compare.comparison(myVec[(index-1)/2],myVec[index]))
+		if(index!=0 && compare.comparison(myVec[index],myVec[(index-1)/2]))
 		{
 			holder = myVec[(index-1)/2];
 			myVec[(index-1)/2] = myVec[index];
