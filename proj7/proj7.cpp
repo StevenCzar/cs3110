@@ -1,5 +1,5 @@
 #include "card.h"
-#include "priorityqueue"
+#include "priorityqueue.h"
 
 Card hearts[13], spades[13]
 Priorityqueue plswork;
