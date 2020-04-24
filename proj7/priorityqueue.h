@@ -63,7 +63,7 @@ private:
 	{	
 		int holder;
 		T holding;
-		if(index*2+1 <= size-1 && compare.comparison(myVec[index], myVec[index*2+1]))
+		if(index*2+1 <= size-1 && compare.comparison(myVec[index*2+1], myVec[index]))
 		{
 			holder = index*2+1;
 		}
@@ -71,7 +71,7 @@ private:
 		{
 			holder = index;
 		}
-		if(index*2+2 <= size-1 && compare.comparison(myVec[holder],myVec[index*2+2]))
+		if(index*2+2 <= size-1 && compare.comparison(myVec[index*2+2],myVec[holder]))
 		{
 			holder = index*2+2;
 		}
