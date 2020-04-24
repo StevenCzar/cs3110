@@ -4,10 +4,8 @@
 
 Card heartsDeck[13];
 Card spadesDeck[13];
-lessThan<Card> less;
-greaterThan<Card> great;
-PriorityQueue<Card, less> lowprio;
-PriorityQueue<Card, great> highprio;
+PriorityQueue<Card, lessThan<Card>> lowprio;
+PriorityQueue<Card, greaterThan<Card>> highprio;
 
 for(int i = 0; i<13; i++)
 {
