@@ -63,10 +63,6 @@ bool Card::operator <= (const Card& cd) const
 {
 	if(cardFace <= cd.getFaceValue())
 	{
-		if(cardFace==0)
-		{
-			return false;
-		}
 		return true;
 	}
 	return false;
@@ -75,13 +71,8 @@ bool Card::operator <= (const Card& cd) const
 bool Card::operator >= (const Card& cd) const
 {
 	//check this first
-	if(cardFace > cd.getFaceValue())
+	if(cardFace >= cd.getFaceValue())
 	{
-		//check ace
-		if(cd.getFaceValue()==0)
-		{
-			return false;
-		}
 		return true;
 	}
 	return false;
