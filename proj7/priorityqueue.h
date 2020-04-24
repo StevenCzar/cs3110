@@ -50,7 +50,7 @@ private:
 	{
 		T holder;
 		//integer math ensures that it will work
-		if(index!=0 && compare.comparison(myVec[index],myVec[(index-1)/2]))
+		if(index!=0 && compare.comparison(myVec[(index-1)/2],myVec[index]))
 		{
 			holder = myVec[(index-1)/2];
 			myVec[(index-1)/2] = myVec[index];
